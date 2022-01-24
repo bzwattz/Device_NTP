@@ -1,0 +1,16 @@
+E:\it_natthapong\Device_NTP\DevApp\DevApp\bin\Debug\DevApp.exe.config
+E:\it_natthapong\Device_NTP\DevApp\DevApp\bin\Debug\DevApp.exe
+E:\it_natthapong\Device_NTP\DevApp\DevApp\bin\Debug\DevApp.pdb
+E:\it_natthapong\Device_NTP\DevApp\DevApp\bin\Debug\EntityFramework.dll
+E:\it_natthapong\Device_NTP\DevApp\DevApp\bin\Debug\EntityFramework.SqlServer.dll
+E:\it_natthapong\Device_NTP\DevApp\DevApp\bin\Debug\EntityFramework.xml
+E:\it_natthapong\Device_NTP\DevApp\DevApp\bin\Debug\EntityFramework.SqlServer.xml
+E:\it_natthapong\Device_NTP\DevApp\DevApp\obj\Debug\DevApp.csproj.AssemblyReference.cache
+E:\it_natthapong\Device_NTP\DevApp\DevApp\obj\Debug\DevApp.Properties.Resources.resources
+E:\it_natthapong\Device_NTP\DevApp\DevApp\obj\Debug\DevApp.csproj.GenerateResource.cache
+E:\it_natthapong\Device_NTP\DevApp\DevApp\obj\Debug\DevApp.csproj.CoreCompileInputs.cache
+E:\it_natthapong\Device_NTP\DevApp\DevApp\obj\Debug\DevApp.csproj.CopyComplete
+E:\it_natthapong\Device_NTP\DevApp\DevApp\obj\Debug\DevApp.exe
+E:\it_natthapong\Device_NTP\DevApp\DevApp\obj\Debug\DevApp.pdb
+E:\it_natthapong\Device_NTP\DevApp\DevApp\obj\Debug\DevApp.FmNewDev.resources
+E:\it_natthapong\Device_NTP\DevApp\DevApp\obj\Debug\DevApp.FmMain.resources

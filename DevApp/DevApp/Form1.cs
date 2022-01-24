@@ -10,11 +10,17 @@ using System.Windows.Forms;
 
 namespace DevApp
 {
-    public partial class Form1 : Form
+    public partial class FmMain : Form
     {
-        public Form1()
+        public FmMain()
         {
             InitializeComponent();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            FmNewDev fmNewDev = new FmNewDev();
+            fmNewDev.ShowDialog();
         }
     }
 }
