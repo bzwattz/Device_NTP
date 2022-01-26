@@ -41,7 +41,7 @@ namespace DevApp
             this.dtStart = new System.Windows.Forms.DateTimePicker();
             this.txtDateNow = new System.Windows.Forms.TextBox();
             this.txtPrice = new System.Windows.Forms.TextBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.txtBrand = new System.Windows.Forms.TextBox();
             this.txtModel = new System.Windows.Forms.TextBox();
             this.txtName = new System.Windows.Forms.TextBox();
             this.txtSN = new System.Windows.Forms.TextBox();
@@ -100,7 +100,7 @@ namespace DevApp
             this.groupBox1.Controls.Add(this.dtStart);
             this.groupBox1.Controls.Add(this.txtDateNow);
             this.groupBox1.Controls.Add(this.txtPrice);
-            this.groupBox1.Controls.Add(this.textBox6);
+            this.groupBox1.Controls.Add(this.txtBrand);
             this.groupBox1.Controls.Add(this.txtModel);
             this.groupBox1.Controls.Add(this.txtName);
             this.groupBox1.Controls.Add(this.txtSN);
@@ -200,12 +200,12 @@ namespace DevApp
             this.txtPrice.Size = new System.Drawing.Size(99, 22);
             this.txtPrice.TabIndex = 25;
             // 
-            // textBox6
+            // txtBrand
             // 
-            this.textBox6.Location = new System.Drawing.Point(322, 57);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(198, 22);
-            this.textBox6.TabIndex = 24;
+            this.txtBrand.Location = new System.Drawing.Point(322, 57);
+            this.txtBrand.Name = "txtBrand";
+            this.txtBrand.Size = new System.Drawing.Size(198, 22);
+            this.txtBrand.TabIndex = 24;
             // 
             // txtModel
             // 
@@ -418,6 +418,7 @@ namespace DevApp
             this.button1.Text = "บันทึก";
             this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // FmNewDev
             // 
@@ -433,6 +434,7 @@ namespace DevApp
             this.Name = "FmNewDev";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ITDevice-เพิ่มข้อมูลอุปกรณ์";
+            this.Load += new System.EventHandler(this.FmNewDev_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.groupBox1.ResumeLayout(false);
@@ -471,7 +473,7 @@ namespace DevApp
         private System.Windows.Forms.DateTimePicker dtStart;
         private System.Windows.Forms.TextBox txtDateNow;
         private System.Windows.Forms.TextBox txtPrice;
-        private System.Windows.Forms.TextBox textBox6;
+        private System.Windows.Forms.TextBox txtBrand;
         private System.Windows.Forms.TextBox txtModel;
         private System.Windows.Forms.TextBox txtName;
         private System.Windows.Forms.TextBox txtSN;
