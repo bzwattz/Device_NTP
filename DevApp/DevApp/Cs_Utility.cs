@@ -124,5 +124,36 @@ namespace DevApp
             }
             return Result;
         }
+        string Str_Status;
+        public string GET_StatusName(int Status_ID)
+        {
+            using (DevAppModel db = new DevAppModel())
+            {
+                var data = db.tb_Dev_Status.Where(f => f.Dev_S_ID == Status_ID).SingleOrDefault();
+                Str_Status = data.Dev_Status;
+            }
+                return Str_Status;
+        }
+        string Str_Depart;
+        public string GET_DepartName(string Depart_ID)
+        {
+            using (DevAppModel db = new DevAppModel())
+            {
+                var data = db.tb_Department.Where(f => f.Dep_id == Depart_ID).SingleOrDefault();
+                Str_Depart = data.Dep_name;
+            }
+                return Str_Depart;
+        }
+        string[] Str_Branch = new string[2];
+        public string[] GET_BranchData(int BR_ID)
+        {
+            using (DevAppModel db = new DevAppModel())
+            {
+                var data = db.tb_Branch.Where(f => f.branch_id == BR_ID).SingleOrDefault();
+                Str_Branch[0] = data.branch_name;
+                Str_Branch[1] = data.branch_addr;
+            }
+                return Str_Branch;
+        }
     }
 }

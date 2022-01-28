@@ -30,20 +30,13 @@ namespace DevApp
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.button6 = new System.Windows.Forms.Button();
-            this.button9 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.ตวเลอกToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.รายการอปกรณลาสดToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.เพมขอมลToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ลบขอมลToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.คนหาขอมลแกไขToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripSeparator();
             this.ออกToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.เบกอปกรณToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -59,12 +52,28 @@ namespace DevApp
             this.ประเภทหลกToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ประเภทหลกToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.ประเภทรองToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.ผใชงานToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.เพมToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.แกไขToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ลบToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.รายการอปกรณลาสดToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.button6 = new System.Windows.Forms.Button();
+            this.button9 = new System.Windows.Forms.Button();
+            this.button5 = new System.Windows.Forms.Button();
+            this.button4 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
+            this.แกไขToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.ยกเลกToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.สงซอมToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.แกไขToolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
+            this.ยกเลกToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.เพมขอมลToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.รายงานอปกรณในแตละสาขาToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.รายงานอปกรณคงเหลอToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.รายงานอปกรณสงซอมToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.รายงานอปกรณทจำหนายออกToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.groupBox1.SuspendLayout();
             this.statusStrip1.SuspendLayout();
             this.menuStrip1.SuspendLayout();
@@ -88,72 +97,6 @@ namespace DevApp
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "เมนู";
-            // 
-            // button6
-            // 
-            this.button6.Location = new System.Drawing.Point(18, 232);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(172, 36);
-            this.button6.TabIndex = 9;
-            this.button6.Text = "รายงาน";
-            this.button6.UseVisualStyleBackColor = true;
-            // 
-            // button9
-            // 
-            this.button9.Image = global::DevApp.Properties.Resources.Close;
-            this.button9.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button9.Location = new System.Drawing.Point(18, 404);
-            this.button9.Name = "button9";
-            this.button9.Size = new System.Drawing.Size(172, 36);
-            this.button9.TabIndex = 8;
-            this.button9.Text = "ปิดโปรแกรม";
-            this.button9.UseVisualStyleBackColor = true;
-            // 
-            // button5
-            // 
-            this.button5.Location = new System.Drawing.Point(18, 190);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(172, 36);
-            this.button5.TabIndex = 4;
-            this.button5.Text = "ค้นหา";
-            this.button5.UseVisualStyleBackColor = true;
-            // 
-            // button4
-            // 
-            this.button4.Location = new System.Drawing.Point(18, 148);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(172, 36);
-            this.button4.TabIndex = 3;
-            this.button4.Text = "จำหน่าย / ทำลาย";
-            this.button4.UseVisualStyleBackColor = true;
-            // 
-            // button3
-            // 
-            this.button3.Location = new System.Drawing.Point(18, 106);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(172, 36);
-            this.button3.TabIndex = 2;
-            this.button3.Text = "เพิ่มรายการซ่อมบำรุง";
-            this.button3.UseVisualStyleBackColor = true;
-            // 
-            // button2
-            // 
-            this.button2.Location = new System.Drawing.Point(18, 64);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(172, 36);
-            this.button2.TabIndex = 1;
-            this.button2.Text = "เบิกอุปกรณ์";
-            this.button2.UseVisualStyleBackColor = true;
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(18, 22);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(172, 36);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "เพิ่มข้อมูลอุปกรณ์";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // statusStrip1
             // 
@@ -193,46 +136,48 @@ namespace DevApp
             this.รายการอปกรณลาสดToolStripMenuItem,
             this.เพมขอมลToolStripMenuItem,
             this.ลบขอมลToolStripMenuItem,
-            this.คนหาขอมลแกไขToolStripMenuItem,
             this.toolStripMenuItem1,
             this.ออกToolStripMenuItem});
             this.ตวเลอกToolStripMenuItem.Name = "ตวเลอกToolStripMenuItem";
             this.ตวเลอกToolStripMenuItem.Size = new System.Drawing.Size(73, 20);
             this.ตวเลอกToolStripMenuItem.Text = "อุปกรณ์ไอที";
             // 
+            // รายการอปกรณลาสดToolStripMenuItem
+            // 
+            this.รายการอปกรณลาสดToolStripMenuItem.Name = "รายการอปกรณลาสดToolStripMenuItem";
+            this.รายการอปกรณลาสดToolStripMenuItem.Size = new System.Drawing.Size(140, 22);
+            this.รายการอปกรณลาสดToolStripMenuItem.Text = "รายการทั้งหมด";
+            this.รายการอปกรณลาสดToolStripMenuItem.Click += new System.EventHandler(this.รายการอปกรณลาสดToolStripMenuItem_Click);
+            // 
             // เพมขอมลToolStripMenuItem
             // 
             this.เพมขอมลToolStripMenuItem.Name = "เพมขอมลToolStripMenuItem";
-            this.เพมขอมลToolStripMenuItem.Size = new System.Drawing.Size(156, 22);
+            this.เพมขอมลToolStripMenuItem.Size = new System.Drawing.Size(140, 22);
             this.เพมขอมลToolStripMenuItem.Text = "เพิ่มข้อมูล";
             // 
             // ลบขอมลToolStripMenuItem
             // 
             this.ลบขอมลToolStripMenuItem.Name = "ลบขอมลToolStripMenuItem";
-            this.ลบขอมลToolStripMenuItem.Size = new System.Drawing.Size(156, 22);
+            this.ลบขอมลToolStripMenuItem.Size = new System.Drawing.Size(140, 22);
             this.ลบขอมลToolStripMenuItem.Text = "ลบข้อมูล";
-            // 
-            // คนหาขอมลแกไขToolStripMenuItem
-            // 
-            this.คนหาขอมลแกไขToolStripMenuItem.Name = "คนหาขอมลแกไขToolStripMenuItem";
-            this.คนหาขอมลแกไขToolStripMenuItem.Size = new System.Drawing.Size(156, 22);
-            this.คนหาขอมลแกไขToolStripMenuItem.Text = "ค้นหาข้อมูล/แก้ไข";
             // 
             // toolStripMenuItem1
             // 
             this.toolStripMenuItem1.Name = "toolStripMenuItem1";
-            this.toolStripMenuItem1.Size = new System.Drawing.Size(153, 6);
+            this.toolStripMenuItem1.Size = new System.Drawing.Size(137, 6);
             // 
             // ออกToolStripMenuItem
             // 
             this.ออกToolStripMenuItem.Name = "ออกToolStripMenuItem";
-            this.ออกToolStripMenuItem.Size = new System.Drawing.Size(156, 22);
+            this.ออกToolStripMenuItem.Size = new System.Drawing.Size(140, 22);
             this.ออกToolStripMenuItem.Text = "ปิดโปรแกรม";
             // 
             // เบกอปกรณToolStripMenuItem
             // 
             this.เบกอปกรณToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.ทำรายการเบกToolStripMenuItem});
+            this.ทำรายการเบกToolStripMenuItem,
+            this.แกไขToolStripMenuItem1,
+            this.ยกเลกToolStripMenuItem});
             this.เบกอปกรณToolStripMenuItem.Name = "เบกอปกรณToolStripMenuItem";
             this.เบกอปกรณToolStripMenuItem.Size = new System.Drawing.Size(72, 20);
             this.เบกอปกรณToolStripMenuItem.Text = "เบิกอุปกรณ์";
@@ -245,18 +190,29 @@ namespace DevApp
             // 
             // ซอมบำรงToolStripMenuItem
             // 
+            this.ซอมบำรงToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.สงซอมToolStripMenuItem,
+            this.แกไขToolStripMenuItem2,
+            this.ยกเลกToolStripMenuItem1});
             this.ซอมบำรงToolStripMenuItem.Name = "ซอมบำรงToolStripMenuItem";
             this.ซอมบำรงToolStripMenuItem.Size = new System.Drawing.Size(61, 20);
             this.ซอมบำรงToolStripMenuItem.Text = "ซ่อมบำรุง";
             // 
             // จำหนายทำลายToolStripMenuItem
             // 
+            this.จำหนายทำลายToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.เพมขอมลToolStripMenuItem1});
             this.จำหนายทำลายToolStripMenuItem.Name = "จำหนายทำลายToolStripMenuItem";
             this.จำหนายทำลายToolStripMenuItem.Size = new System.Drawing.Size(89, 20);
             this.จำหนายทำลายToolStripMenuItem.Text = "จำหน่าย/ทำลาย";
             // 
             // รายงานToolStripMenuItem
             // 
+            this.รายงานToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.รายงานอปกรณในแตละสาขาToolStripMenuItem,
+            this.รายงานอปกรณคงเหลอToolStripMenuItem,
+            this.รายงานอปกรณสงซอมToolStripMenuItem,
+            this.รายงานอปกรณทจำหนายออกToolStripMenuItem});
             this.รายงานToolStripMenuItem.Name = "รายงานToolStripMenuItem";
             this.รายงานToolStripMenuItem.Size = new System.Drawing.Size(52, 20);
             this.รายงานToolStripMenuItem.Text = "รายงาน";
@@ -295,7 +251,7 @@ namespace DevApp
             // สถานะอปกรณToolStripMenuItem
             // 
             this.สถานะอปกรณToolStripMenuItem.Name = "สถานะอปกรณToolStripMenuItem";
-            this.สถานะอปกรณToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.สถานะอปกรณToolStripMenuItem.Size = new System.Drawing.Size(139, 22);
             this.สถานะอปกรณToolStripMenuItem.Text = "สถานะอุปกรณ์";
             // 
             // ประเภทหลกToolStripMenuItem
@@ -304,7 +260,7 @@ namespace DevApp
             this.ประเภทหลกToolStripMenuItem1,
             this.ประเภทรองToolStripMenuItem});
             this.ประเภทหลกToolStripMenuItem.Name = "ประเภทหลกToolStripMenuItem";
-            this.ประเภทหลกToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.ประเภทหลกToolStripMenuItem.Size = new System.Drawing.Size(139, 22);
             this.ประเภทหลกToolStripMenuItem.Text = "ประเภท";
             // 
             // ประเภทหลกToolStripMenuItem1
@@ -319,6 +275,34 @@ namespace DevApp
             this.ประเภทรองToolStripMenuItem.Size = new System.Drawing.Size(127, 22);
             this.ประเภทรองToolStripMenuItem.Text = "ประเภทรอง";
             // 
+            // ผใชงานToolStripMenuItem
+            // 
+            this.ผใชงานToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.เพมToolStripMenuItem,
+            this.แกไขToolStripMenuItem,
+            this.ลบToolStripMenuItem});
+            this.ผใชงานToolStripMenuItem.Name = "ผใชงานToolStripMenuItem";
+            this.ผใชงานToolStripMenuItem.Size = new System.Drawing.Size(139, 22);
+            this.ผใชงานToolStripMenuItem.Text = "ผู้ใช้งาน";
+            // 
+            // เพมToolStripMenuItem
+            // 
+            this.เพมToolStripMenuItem.Name = "เพมToolStripMenuItem";
+            this.เพมToolStripMenuItem.Size = new System.Drawing.Size(99, 22);
+            this.เพมToolStripMenuItem.Text = "เพิ่ม";
+            // 
+            // แกไขToolStripMenuItem
+            // 
+            this.แกไขToolStripMenuItem.Name = "แกไขToolStripMenuItem";
+            this.แกไขToolStripMenuItem.Size = new System.Drawing.Size(99, 22);
+            this.แกไขToolStripMenuItem.Text = "แก้ไข";
+            // 
+            // ลบToolStripMenuItem
+            // 
+            this.ลบToolStripMenuItem.Name = "ลบToolStripMenuItem";
+            this.ลบToolStripMenuItem.Size = new System.Drawing.Size(99, 22);
+            this.ลบToolStripMenuItem.Text = "ลบ";
+            // 
             // pictureBox1
             // 
             this.pictureBox1.Image = global::DevApp.Properties.Resources.Information_Technology_Business_World;
@@ -328,39 +312,144 @@ namespace DevApp
             this.pictureBox1.TabIndex = 2;
             this.pictureBox1.TabStop = false;
             // 
-            // ผใชงานToolStripMenuItem
+            // button6
             // 
-            this.ผใชงานToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.เพมToolStripMenuItem,
-            this.แกไขToolStripMenuItem,
-            this.ลบToolStripMenuItem});
-            this.ผใชงานToolStripMenuItem.Name = "ผใชงานToolStripMenuItem";
-            this.ผใชงานToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.ผใชงานToolStripMenuItem.Text = "ผู้ใช้งาน";
+            this.button6.Image = global::DevApp.Properties.Resources.Report;
+            this.button6.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button6.Location = new System.Drawing.Point(18, 232);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(172, 36);
+            this.button6.TabIndex = 9;
+            this.button6.Text = "รายงาน";
+            this.button6.UseVisualStyleBackColor = true;
             // 
-            // เพมToolStripMenuItem
+            // button9
             // 
-            this.เพมToolStripMenuItem.Name = "เพมToolStripMenuItem";
-            this.เพมToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.เพมToolStripMenuItem.Text = "เพิ่ม";
+            this.button9.Image = global::DevApp.Properties.Resources.Close;
+            this.button9.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button9.Location = new System.Drawing.Point(18, 404);
+            this.button9.Name = "button9";
+            this.button9.Size = new System.Drawing.Size(172, 36);
+            this.button9.TabIndex = 8;
+            this.button9.Text = "ปิดโปรแกรม";
+            this.button9.UseVisualStyleBackColor = true;
+            this.button9.Click += new System.EventHandler(this.button9_Click);
             // 
-            // แกไขToolStripMenuItem
+            // button5
             // 
-            this.แกไขToolStripMenuItem.Name = "แกไขToolStripMenuItem";
-            this.แกไขToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.แกไขToolStripMenuItem.Text = "แก้ไข";
+            this.button5.Image = global::DevApp.Properties.Resources.Zoom;
+            this.button5.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button5.Location = new System.Drawing.Point(18, 190);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(172, 36);
+            this.button5.TabIndex = 4;
+            this.button5.Text = "ค้นหา";
+            this.button5.UseVisualStyleBackColor = true;
             // 
-            // ลบToolStripMenuItem
+            // button4
             // 
-            this.ลบToolStripMenuItem.Name = "ลบToolStripMenuItem";
-            this.ลบToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.ลบToolStripMenuItem.Text = "ลบ";
+            this.button4.Image = global::DevApp.Properties.Resources.No_entry;
+            this.button4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button4.Location = new System.Drawing.Point(18, 148);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(172, 36);
+            this.button4.TabIndex = 3;
+            this.button4.Text = "จำหน่าย / ทำลาย";
+            this.button4.UseVisualStyleBackColor = true;
             // 
-            // รายการอปกรณลาสดToolStripMenuItem
+            // button3
             // 
-            this.รายการอปกรณลาสดToolStripMenuItem.Name = "รายการอปกรณลาสดToolStripMenuItem";
-            this.รายการอปกรณลาสดToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.รายการอปกรณลาสดToolStripMenuItem.Text = "รายการอุปกรณ์ล่าสุด";
+            this.button3.Image = global::DevApp.Properties.Resources.Wrench;
+            this.button3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button3.Location = new System.Drawing.Point(18, 106);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(172, 36);
+            this.button3.TabIndex = 2;
+            this.button3.Text = "ซ่อมบำรุง";
+            this.button3.UseVisualStyleBackColor = true;
+            // 
+            // button2
+            // 
+            this.button2.Image = global::DevApp.Properties.Resources.About;
+            this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button2.Location = new System.Drawing.Point(18, 64);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(172, 36);
+            this.button2.TabIndex = 1;
+            this.button2.Text = "เบิกอุปกรณ์";
+            this.button2.UseVisualStyleBackColor = true;
+            // 
+            // button1
+            // 
+            this.button1.Image = global::DevApp.Properties.Resources.Add;
+            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button1.Location = new System.Drawing.Point(18, 22);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(172, 36);
+            this.button1.TabIndex = 0;
+            this.button1.Text = "เพิ่มข้อมูลอุปกรณ์";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // แกไขToolStripMenuItem1
+            // 
+            this.แกไขToolStripMenuItem1.Name = "แกไขToolStripMenuItem1";
+            this.แกไขToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
+            this.แกไขToolStripMenuItem1.Text = "แก้ไข";
+            // 
+            // ยกเลกToolStripMenuItem
+            // 
+            this.ยกเลกToolStripMenuItem.Name = "ยกเลกToolStripMenuItem";
+            this.ยกเลกToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.ยกเลกToolStripMenuItem.Text = "ยกเลิก";
+            // 
+            // สงซอมToolStripMenuItem
+            // 
+            this.สงซอมToolStripMenuItem.Name = "สงซอมToolStripMenuItem";
+            this.สงซอมToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.สงซอมToolStripMenuItem.Text = "ส่งซ่อม";
+            // 
+            // แกไขToolStripMenuItem2
+            // 
+            this.แกไขToolStripMenuItem2.Name = "แกไขToolStripMenuItem2";
+            this.แกไขToolStripMenuItem2.Size = new System.Drawing.Size(180, 22);
+            this.แกไขToolStripMenuItem2.Text = "แก้ไข";
+            // 
+            // ยกเลกToolStripMenuItem1
+            // 
+            this.ยกเลกToolStripMenuItem1.Name = "ยกเลกToolStripMenuItem1";
+            this.ยกเลกToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
+            this.ยกเลกToolStripMenuItem1.Text = "ยกเลิก";
+            // 
+            // เพมขอมลToolStripMenuItem1
+            // 
+            this.เพมขอมลToolStripMenuItem1.Name = "เพมขอมลToolStripMenuItem1";
+            this.เพมขอมลToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
+            this.เพมขอมลToolStripMenuItem1.Text = "เพิ่มข้อมูล";
+            // 
+            // รายงานอปกรณในแตละสาขาToolStripMenuItem
+            // 
+            this.รายงานอปกรณในแตละสาขาToolStripMenuItem.Name = "รายงานอปกรณในแตละสาขาToolStripMenuItem";
+            this.รายงานอปกรณในแตละสาขาToolStripMenuItem.Size = new System.Drawing.Size(205, 22);
+            this.รายงานอปกรณในแตละสาขาToolStripMenuItem.Text = "รายงานอุปกรณ์ในแต่ละสาขา";
+            // 
+            // รายงานอปกรณคงเหลอToolStripMenuItem
+            // 
+            this.รายงานอปกรณคงเหลอToolStripMenuItem.Name = "รายงานอปกรณคงเหลอToolStripMenuItem";
+            this.รายงานอปกรณคงเหลอToolStripMenuItem.Size = new System.Drawing.Size(205, 22);
+            this.รายงานอปกรณคงเหลอToolStripMenuItem.Text = "รายงานอุปกรณ์คงเหลือ";
+            // 
+            // รายงานอปกรณสงซอมToolStripMenuItem
+            // 
+            this.รายงานอปกรณสงซอมToolStripMenuItem.Name = "รายงานอปกรณสงซอมToolStripMenuItem";
+            this.รายงานอปกรณสงซอมToolStripMenuItem.Size = new System.Drawing.Size(205, 22);
+            this.รายงานอปกรณสงซอมToolStripMenuItem.Text = "รายงานอุปกรณ์ส่งซ่อม";
+            // 
+            // รายงานอปกรณทจำหนายออกToolStripMenuItem
+            // 
+            this.รายงานอปกรณทจำหนายออกToolStripMenuItem.Name = "รายงานอปกรณทจำหนายออกToolStripMenuItem";
+            this.รายงานอปกรณทจำหนายออกToolStripMenuItem.Size = new System.Drawing.Size(205, 22);
+            this.รายงานอปกรณทจำหนายออกToolStripMenuItem.Text = "รายงานอุปกรณ์ที่จำหน่ายออก";
             // 
             // FmMain
             // 
@@ -413,7 +502,6 @@ namespace DevApp
         private System.Windows.Forms.ToolStripMenuItem ประเภทรองToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem เพมขอมลToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem ลบขอมลToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem คนหาขอมลแกไขToolStripMenuItem;
         private System.Windows.Forms.ToolStripSeparator toolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem ออกToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem ทำรายการเบกToolStripMenuItem;
@@ -427,6 +515,16 @@ namespace DevApp
         private System.Windows.Forms.ToolStripMenuItem แกไขToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem ลบToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem รายการอปกรณลาสดToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem แกไขToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem ยกเลกToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem สงซอมToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem แกไขToolStripMenuItem2;
+        private System.Windows.Forms.ToolStripMenuItem ยกเลกToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem เพมขอมลToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem รายงานอปกรณในแตละสาขาToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem รายงานอปกรณคงเหลอToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem รายงานอปกรณสงซอมToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem รายงานอปกรณทจำหนายออกToolStripMenuItem;
     }
 }
 

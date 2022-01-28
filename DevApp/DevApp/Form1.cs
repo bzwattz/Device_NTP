@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using DevApp.Device;
 
 namespace DevApp
 {
@@ -21,6 +22,17 @@ namespace DevApp
         {
             FmNewDev fmNewDev = new FmNewDev();
             fmNewDev.ShowDialog();
+        }
+
+        private void รายการอปกรณลาสดToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FmDeviceList fmDeviceList = new FmDeviceList();
+            fmDeviceList.ShowDialog();
+        }
+
+        private void button9_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
     }
 }
