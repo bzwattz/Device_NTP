@@ -33,8 +33,8 @@ namespace DevApp
                 Warn_Start = dtStart.Value.Date,
                 Warn_End = dtEnd.Value.Date,
                 Dev_Note = txtNote.Text,
-                Dev_NTP_Key = txtNTPKey.Text,
-                User_id = 0,
+                Dev_NTP_Key = "No Key",
+                User_id = 1,// 1 Default User System
                 Dev_S_ID = Convert.ToInt32(cbStatus.SelectedValue),
                 Dep_id = cbDepart.SelectedValue.ToString(),
                 branch_id = Convert.ToInt32(cbBranch.SelectedValue),
@@ -46,6 +46,7 @@ namespace DevApp
             if (Data == true)
             {
                 MessageBox.Show("ทำรายการสำเร็จ","Information",MessageBoxButtons.OK,MessageBoxIcon.Information);
+                this.Close();
             }
         }
 
@@ -87,6 +88,11 @@ namespace DevApp
             cbBranch.DataSource = ds4;
             cbBranch.ValueMember = "branch_id";
             cbBranch.DisplayMember = "branch_name";
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

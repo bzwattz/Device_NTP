@@ -16,7 +16,8 @@ namespace DevApp
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FmMain());
+            //Application.Run(new FmMain());
+            Application.Run(new Login());
         }
     }
 }
