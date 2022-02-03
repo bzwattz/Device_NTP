@@ -155,5 +155,25 @@ namespace DevApp
             }
                 return Str_Branch;
         }
+        string Str_Type;
+        public string GET_MainType(int typeID)
+        {
+            using (DevAppModel db = new DevAppModel())
+            {
+                var data = db.tb_Type.Where(f => f.Type_id == typeID).SingleOrDefault();
+                Str_Type = data.Type_name;
+            }
+            return Str_Type;
+        }
+        string Str_Sub_Type;
+        public string GET_SubType(int typeIDr)
+        {
+            using (DevAppModel db = new DevAppModel())
+            {
+                var data = db.tb_Sub_Type.Where(f =>f.ST_ID == typeIDr).SingleOrDefault();
+                Str_Sub_Type = data.ST_Name;
+            }
+            return Str_Sub_Type;
+        }
     }
 }

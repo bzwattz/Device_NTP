@@ -30,21 +30,21 @@ namespace DevApp.Device
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.gridData = new System.Windows.Forms.DataGridView();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
-            this.gridData = new System.Windows.Forms.DataGridView();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.txtSN = new System.Windows.Forms.TextBox();
             this.button2 = new System.Windows.Forms.Button();
+            this.txtSN = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.gridData)).BeginInit();
             this.groupBox2.SuspendLayout();
             this.statusStrip1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.gridData)).BeginInit();
             this.groupBox3.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -56,7 +56,17 @@ namespace DevApp.Device
             this.groupBox1.Size = new System.Drawing.Size(958, 541);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "รายการ 200 รายการล่าสุด";
+            this.groupBox1.Text = "รายการ 500 รายการล่าสุด";
+            // 
+            // gridData
+            // 
+            this.gridData.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.gridData.Location = new System.Drawing.Point(6, 19);
+            this.gridData.Name = "gridData";
+            this.gridData.Size = new System.Drawing.Size(945, 516);
+            this.gridData.TabIndex = 0;
+            this.gridData.DoubleClick += new System.EventHandler(this.gridData_DoubleClick);
+            this.gridData.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.gridData_MouseDoubleClick);
             // 
             // groupBox2
             // 
@@ -68,6 +78,26 @@ namespace DevApp.Device
             this.groupBox2.TabIndex = 1;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "สรุป";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(721, 16);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(108, 16);
+            this.label2.TabIndex = 1;
+            this.label2.Text = "มูลค่ารวม : 0.00 บาท";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(81, 16);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(128, 16);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "จำนวนทั้งหมด : 0 รายการ";
             // 
             // statusStrip1
             // 
@@ -85,34 +115,6 @@ namespace DevApp.Device
             this.toolStripStatusLabel1.Size = new System.Drawing.Size(147, 17);
             this.toolStripStatusLabel1.Text = "Double click เพื่อดูรายละเอียด";
             // 
-            // gridData
-            // 
-            this.gridData.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.gridData.Location = new System.Drawing.Point(6, 19);
-            this.gridData.Name = "gridData";
-            this.gridData.Size = new System.Drawing.Size(945, 516);
-            this.gridData.TabIndex = 0;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(81, 16);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(128, 16);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "จำนวนทั้งหมด : 0 รายการ";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(721, 16);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(108, 16);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "มูลค่ารวม : 0.00 บาท";
-            // 
             // groupBox3
             // 
             this.groupBox3.Controls.Add(this.button2);
@@ -125,22 +127,6 @@ namespace DevApp.Device
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "ค้นหา";
             // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(21, 25);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(28, 13);
-            this.label3.TabIndex = 0;
-            this.label3.Text = "SN :";
-            // 
-            // txtSN
-            // 
-            this.txtSN.Location = new System.Drawing.Point(55, 22);
-            this.txtSN.Name = "txtSN";
-            this.txtSN.Size = new System.Drawing.Size(125, 20);
-            this.txtSN.TabIndex = 1;
-            // 
             // button2
             // 
             this.button2.Location = new System.Drawing.Point(185, 20);
@@ -149,6 +135,24 @@ namespace DevApp.Device
             this.button2.TabIndex = 2;
             this.button2.Text = "OK";
             this.button2.UseVisualStyleBackColor = true;
+            // 
+            // txtSN
+            // 
+            this.txtSN.Location = new System.Drawing.Point(55, 22);
+            this.txtSN.Name = "txtSN";
+            this.txtSN.Size = new System.Drawing.Size(125, 20);
+            this.txtSN.TabIndex = 1;
+            this.txtSN.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtSN.TextChanged += new System.EventHandler(this.txtSN_TextChanged);
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(21, 25);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(28, 13);
+            this.label3.TabIndex = 0;
+            this.label3.Text = "SN :";
             // 
             // button1
             // 
@@ -179,11 +183,11 @@ namespace DevApp.Device
             this.Text = "รายการอุปกรณ์ไอทีทั้งหมด";
             this.Load += new System.EventHandler(this.FmDeviceList_Load);
             this.groupBox1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.gridData)).EndInit();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             this.statusStrip1.ResumeLayout(false);
             this.statusStrip1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.gridData)).EndInit();
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
             this.ResumeLayout(false);

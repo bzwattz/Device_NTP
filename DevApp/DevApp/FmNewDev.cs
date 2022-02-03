@@ -18,8 +18,17 @@ namespace DevApp
             InitializeComponent();
         }
         private Cs_Utility CU = new Cs_Utility();
+        string Str_Warn;
         private void button1_Click(object sender, EventArgs e)
         {
+            if (CkWarn.Checked == true)
+            {
+                Str_Warn = "ประกันตลอดอายุการใช้งาน";
+            }
+            else
+            {
+                Str_Warn = "";
+            }
             var nowDate = DateTime.Now;
             tb_Device dataModel = new tb_Device()
             {               
@@ -32,7 +41,7 @@ namespace DevApp
                 Date_IN = nowDate,
                 Warn_Start = dtStart.Value.Date,
                 Warn_End = dtEnd.Value.Date,
-                Dev_Note = txtNote.Text,
+                Dev_Note = txtStoreName.Text+"/"+txtRefID.Text + "/" + Str_Warn + "/" + txtNote.Text,
                 Dev_NTP_Key = "No Key",
                 User_id = 1,// 1 Default User System
                 Dev_S_ID = Convert.ToInt32(cbStatus.SelectedValue),
@@ -60,13 +69,13 @@ namespace DevApp
             cbType.ValueMember = "Type_id";
             cbType.DisplayMember = "Type_name";
 
-            //Fill CbsubType 
-            //Fill Combobox /usertype
-            DevAppModel context1 = new DevAppModel();
-            var ds1 = context.tb_Sub_Type.ToArray();
-            cbSub_Type.DataSource = ds1;
-            cbSub_Type.ValueMember = "ST_ID";
-            cbSub_Type.DisplayMember = "ST_Name";
+            ////Fill CbsubType 
+            ////Fill Combobox /usertype
+            //DevAppModel context1 = new DevAppModel();
+            //var ds1 = context1.tb_Sub_Type.ToArray();
+            //cbSub_Type.DataSource = ds1;
+            //cbSub_Type.ValueMember = "ST_ID";
+            //cbSub_Type.DisplayMember = "ST_Name";
 
             //Fill Combobox /usertype
             DevAppModel context2 = new DevAppModel();
@@ -93,6 +102,18 @@ namespace DevApp
         private void button2_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void cbType_SelectionChangeCommitted(object sender, EventArgs e)
+        {
+            ////Fill CbsubType 
+            ////Fill Combobox /usertype
+            var SelectVal = Convert.ToInt32(cbType.SelectedValue);
+            DevAppModel context1 = new DevAppModel();
+            var ds1 = context1.tb_Sub_Type.Where(f=>f.Type_id == SelectVal).ToArray();
+            cbSub_Type.DataSource = ds1;
+            cbSub_Type.ValueMember = "ST_ID";
+            cbSub_Type.DisplayMember = "ST_Name";
         }
     }
 }

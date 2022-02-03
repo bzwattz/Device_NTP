@@ -33,3 +33,5 @@ E:\Project\ntp_Dev\Device_NTP\DevApp\DevApp\obj\Debug\DevApp.pdb
 E:\Project\ntp_Dev\Device_NTP\DevApp\DevApp\obj\Debug\DevApp.Login.resources
 E:\it_natthapong\Device_NTP\DevApp\DevApp\obj\Debug\DevApp.Login.resources
 E:\it_natthapong\Device_NTP\DevApp\DevApp\obj\Debug\DevApp.Device.FmDeviceList.resources
+E:\Project\ntp_Dev\Device_NTP\DevApp\DevApp\obj\Debug\DevApp.Device.FmDeviceList.resources
+E:\Project\ntp_Dev\Device_NTP\DevApp\DevApp\obj\Debug\DevApp.Device.FmDevDetails.resources

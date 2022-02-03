@@ -32,6 +32,7 @@ namespace DevApp
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.CkWarn = new System.Windows.Forms.CheckBox();
             this.cbBranch = new System.Windows.Forms.ComboBox();
             this.cbDepart = new System.Windows.Forms.ComboBox();
             this.cbStatus = new System.Windows.Forms.ComboBox();
@@ -66,6 +67,10 @@ namespace DevApp
             this.label2 = new System.Windows.Forms.Label();
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
+            this.label18 = new System.Windows.Forms.Label();
+            this.label19 = new System.Windows.Forms.Label();
+            this.txtStoreName = new System.Windows.Forms.TextBox();
+            this.txtRefID = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -91,6 +96,11 @@ namespace DevApp
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.txtRefID);
+            this.groupBox1.Controls.Add(this.txtStoreName);
+            this.groupBox1.Controls.Add(this.label19);
+            this.groupBox1.Controls.Add(this.label18);
+            this.groupBox1.Controls.Add(this.CkWarn);
             this.groupBox1.Controls.Add(this.cbBranch);
             this.groupBox1.Controls.Add(this.cbDepart);
             this.groupBox1.Controls.Add(this.cbStatus);
@@ -129,6 +139,16 @@ namespace DevApp
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "ข้อมูล";
+            // 
+            // CkWarn
+            // 
+            this.CkWarn.AutoSize = true;
+            this.CkWarn.Location = new System.Drawing.Point(451, 122);
+            this.CkWarn.Name = "CkWarn";
+            this.CkWarn.Size = new System.Drawing.Size(100, 20);
+            this.CkWarn.TabIndex = 34;
+            this.CkWarn.Text = "ตลอดการใช้งาน";
+            this.CkWarn.UseVisualStyleBackColor = true;
             // 
             // cbBranch
             // 
@@ -169,6 +189,7 @@ namespace DevApp
             this.cbType.Name = "cbType";
             this.cbType.Size = new System.Drawing.Size(109, 24);
             this.cbType.TabIndex = 29;
+            this.cbType.SelectionChangeCommitted += new System.EventHandler(this.cbType_SelectionChangeCommitted);
             // 
             // dtEnd
             // 
@@ -188,6 +209,7 @@ namespace DevApp
             // 
             // txtDateNow
             // 
+            this.txtDateNow.Enabled = false;
             this.txtDateNow.Location = new System.Drawing.Point(322, 90);
             this.txtDateNow.Name = "txtDateNow";
             this.txtDateNow.Size = new System.Drawing.Size(120, 22);
@@ -223,10 +245,13 @@ namespace DevApp
             // 
             // txtSN
             // 
+            this.txtSN.ForeColor = System.Drawing.Color.Red;
             this.txtSN.Location = new System.Drawing.Point(100, 25);
             this.txtSN.Name = "txtSN";
             this.txtSN.Size = new System.Drawing.Size(160, 22);
             this.txtSN.TabIndex = 21;
+            this.txtSN.Text = "(บังคับ)";
+            this.txtSN.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label17
             // 
@@ -296,6 +321,7 @@ namespace DevApp
             this.txtNote.Name = "txtNote";
             this.txtNote.Size = new System.Drawing.Size(420, 22);
             this.txtNote.TabIndex = 11;
+            this.txtNote.Text = "..";
             // 
             // label11
             // 
@@ -346,9 +372,9 @@ namespace DevApp
             // 
             this.txtDetails.Location = new System.Drawing.Point(100, 154);
             this.txtDetails.Name = "txtDetails";
-            this.txtDetails.Size = new System.Drawing.Size(420, 87);
+            this.txtDetails.Size = new System.Drawing.Size(420, 62);
             this.txtDetails.TabIndex = 5;
-            this.txtDetails.Text = "";
+            this.txtDetails.Text = "..";
             // 
             // label6
             // 
@@ -421,6 +447,42 @@ namespace DevApp
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.Location = new System.Drawing.Point(41, 227);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(53, 16);
+            this.label18.TabIndex = 35;
+            this.label18.Text = "ร้านที่ซื้อ :";
+            // 
+            // label19
+            // 
+            this.label19.AutoSize = true;
+            this.label19.Location = new System.Drawing.Point(305, 227);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(93, 16);
+            this.label19.TabIndex = 36;
+            this.label19.Text = "เลขที่ใบกำกับภาษี :";
+            // 
+            // txtStoreName
+            // 
+            this.txtStoreName.BackColor = System.Drawing.Color.LightCoral;
+            this.txtStoreName.Location = new System.Drawing.Point(100, 224);
+            this.txtStoreName.Name = "txtStoreName";
+            this.txtStoreName.Size = new System.Drawing.Size(123, 22);
+            this.txtStoreName.TabIndex = 37;
+            this.txtStoreName.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // txtRefID
+            // 
+            this.txtRefID.BackColor = System.Drawing.Color.LightCoral;
+            this.txtRefID.Location = new System.Drawing.Point(404, 224);
+            this.txtRefID.Name = "txtRefID";
+            this.txtRefID.Size = new System.Drawing.Size(116, 22);
+            this.txtRefID.TabIndex = 38;
+            this.txtRefID.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
             // FmNewDev
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -483,5 +545,10 @@ namespace DevApp
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.CheckBox CkWarn;
+        private System.Windows.Forms.TextBox txtRefID;
+        private System.Windows.Forms.TextBox txtStoreName;
+        private System.Windows.Forms.Label label19;
+        private System.Windows.Forms.Label label18;
     }
 }
