@@ -30,6 +30,7 @@ namespace DevApp.Device
             gridData.Columns.Add("A3", "สถานะ");
             gridData.Columns.Add("A4", "แผนก");
             gridData.Columns.Add("A5", "สาขา");
+            
 
             gridData.Columns[0].Width = 80;
             gridData.Columns[1].Width = 200;

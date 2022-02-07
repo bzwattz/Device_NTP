@@ -34,5 +34,11 @@ namespace DevApp
         {
             Application.Exit();
         }
+
+        private void เพมขอมลToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FmNewDev fmNewDev = new FmNewDev();
+            fmNewDev.ShowDialog();
+        }
     }
 }

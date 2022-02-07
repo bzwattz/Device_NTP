@@ -39,16 +39,38 @@ namespace DevApp.Device
                     label23.Text = Convert.ToDateTime(Data.Date_IN).ToString("d/MM/yyyy");
                     label24.Text = Convert.ToDateTime(Data.Warn_Start).ToString("d/MM/yyyy");
                     label25.Text = Convert.ToDateTime(Data.Warn_End).ToString("d/MM/yyyy");
-                    label26.Text = Data.Dev_Spec;
+                    txtDetails.Text = Data.Dev_Spec;
                     label27.Text = CU.GET_MainType(Convert.ToInt32(Data.Type_id));
                     label28.Text = CU.GET_SubType(Convert.ToInt32(Data.ST_ID));
-
-                        //CU.GET_StatusName(Convert.ToInt32(Data.Dev_S_ID));
-                    //switch (Data.Dev_S_ID)
-                    //{
-                    //    case 1:label27.BackColor = Color.
-                    //};
-
+                    label29.Text = CU.GET_StatusName(Convert.ToInt32(Data.Dev_S_ID));
+                    switch (Convert.ToInt32(Data.Dev_S_ID))
+                    {
+                        case 1 :
+                            label29.ForeColor = Color.White;
+                            label29.BackColor = Color.Green;
+                            break;
+                        case 2:
+                            label29.ForeColor = Color.White;
+                            label29.BackColor = Color.Red;
+                            break;
+                        case 3:
+                            label29.ForeColor = Color.White;
+                            label29.BackColor = Color.YellowGreen;
+                            break;
+                        case 4:
+                            label29.ForeColor = Color.White;
+                            label29.BackColor = Color.Blue;
+                            break;
+                        case 5:
+                            label29.ForeColor = Color.White;
+                            label29.BackColor = Color.Gray;
+                            break;
+                    };
+                    label30.Text = CU.GET_DepartName(Convert.ToString(Data.Dep_id));
+                    var Ex = CU.GET_BranchData(Convert.ToInt32(Data.branch_id));
+                    label32.Text = Ex[0];
+                    label31.Text = Data.Dev_NTP_Key;
+                    txtNote.Text = Data.Dev_Note;
                 }
             }
         }

@@ -9,5 +9,6 @@ namespace DevApp
     public class PublicVal
     {
         public static int DevID;
+        public static int LoginID;
     }
 }

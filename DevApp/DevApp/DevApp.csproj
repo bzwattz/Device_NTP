@@ -82,6 +82,12 @@
     <Compile Include="Device\FmDevDetails.Designer.cs">
       <DependentUpon>FmDevDetails.cs</DependentUpon>
     </Compile>
+    <Compile Include="Device\FmDevEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Device\FmDevEdit.Designer.cs">
+      <DependentUpon>FmDevEdit.cs</DependentUpon>
+    </Compile>
     <Compile Include="Device\FmDeviceList.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -123,6 +129,9 @@
     <Compile Include="PublicVal.cs" />
     <EmbeddedResource Include="Device\FmDevDetails.resx">
       <DependentUpon>FmDevDetails.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Device\FmDevEdit.resx">
+      <DependentUpon>FmDevEdit.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Device\FmDeviceList.resx">
       <DependentUpon>FmDeviceList.cs</DependentUpon>
