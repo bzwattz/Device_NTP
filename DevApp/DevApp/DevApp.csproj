@@ -51,6 +51,9 @@
     <StartupObject>
     </StartupObject>
   </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Icons8-Ios7-Mobile-Multiple-Devices.ico</ApplicationIcon>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
@@ -207,6 +210,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Zoom.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Icons8-Ios7-Mobile-Multiple-Devices.ico" />
+    <None Include="Resources\Modify.png" />
+    <None Include="Resources\Delete.png" />
+    <None Include="Resources\Remove.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

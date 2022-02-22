@@ -12,7 +12,7 @@ namespace DevApp
     {
         public bool AddDevice(tb_Device dataModel)
         {
-            bool result = false;
+            bool result = false;           
             using (TransactionScope tran1 = new TransactionScope())
             {
                 using (DevAppModel context = new DevAppModel())

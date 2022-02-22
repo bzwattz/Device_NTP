@@ -18,27 +18,21 @@ namespace DevApp.Model
         [Key]
         public int Dev_id { get; set; }
 
-        [StringLength(100)]
-        [Required]
+        [StringLength(100)]        
         public string Dev_SN { get; set; }
 
-        [StringLength(180)]
-        [Required]
+        [StringLength(180)]     
         public string Dev_Name { get; set; }
 
-        [StringLength(100)]
-        [Required]
+        [StringLength(100)]       
         public string Dev_Model { get; set; }
 
-        [StringLength(100)]
-        [Required]
+        [StringLength(100)]        
         public string Dev_Brand { get; set; }
 
-        [StringLength(200)]
-        [Required]
+        [StringLength(200)]       
         public string Dev_Spec { get; set; }
-
-        [Required]
+       
         public decimal? Dev_Price { get; set; }
 
         [Column(TypeName = "datetime2")]
@@ -50,12 +44,10 @@ namespace DevApp.Model
         [Column(TypeName = "datetime2")]
         public DateTime? Warn_End { get; set; }
 
-        [StringLength(255)]
-        [Required]
+        [StringLength(255)]       
         public string Dev_Note { get; set; }
 
-        [StringLength(100)]
-        [Required]
+        [StringLength(100)]        
         public string Dev_NTP_Key { get; set; }
 
         public int? User_id { get; set; }

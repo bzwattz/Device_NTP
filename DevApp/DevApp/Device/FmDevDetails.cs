@@ -74,5 +74,11 @@ namespace DevApp.Device
                 }
             }
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {            
+            FmDevEdit fmDevEdit = new FmDevEdit();
+            fmDevEdit.ShowDialog();
+        }
     }
 }

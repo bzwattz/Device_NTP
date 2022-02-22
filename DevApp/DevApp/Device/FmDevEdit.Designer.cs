@@ -30,7 +30,20 @@ namespace DevApp.Device
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.txtNTPKey = new System.Windows.Forms.TextBox();
+            this.cbBranch = new System.Windows.Forms.ComboBox();
+            this.cbDepart = new System.Windows.Forms.ComboBox();
+            this.cbDevStatus = new System.Windows.Forms.ComboBox();
+            this.cbSubType = new System.Windows.Forms.ComboBox();
+            this.cbMainType = new System.Windows.Forms.ComboBox();
+            this.dtWarn_End = new System.Windows.Forms.DateTimePicker();
+            this.dtWarn_Start = new System.Windows.Forms.DateTimePicker();
+            this.dtDateIn = new System.Windows.Forms.DateTimePicker();
+            this.txtPrice = new System.Windows.Forms.TextBox();
+            this.txtBrand = new System.Windows.Forms.TextBox();
+            this.txtModel = new System.Windows.Forms.TextBox();
+            this.txtName = new System.Windows.Forms.TextBox();
+            this.txtSN = new System.Windows.Forms.TextBox();
             this.txtNote = new System.Windows.Forms.RichTextBox();
             this.txtDetails = new System.Windows.Forms.RichTextBox();
             this.label17 = new System.Windows.Forms.Label();
@@ -49,6 +62,7 @@ namespace DevApp.Device
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.button3 = new System.Windows.Forms.Button();
@@ -58,6 +72,20 @@ namespace DevApp.Device
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.txtNTPKey);
+            this.groupBox1.Controls.Add(this.cbBranch);
+            this.groupBox1.Controls.Add(this.cbDepart);
+            this.groupBox1.Controls.Add(this.cbDevStatus);
+            this.groupBox1.Controls.Add(this.cbSubType);
+            this.groupBox1.Controls.Add(this.cbMainType);
+            this.groupBox1.Controls.Add(this.dtWarn_End);
+            this.groupBox1.Controls.Add(this.dtWarn_Start);
+            this.groupBox1.Controls.Add(this.dtDateIn);
+            this.groupBox1.Controls.Add(this.txtPrice);
+            this.groupBox1.Controls.Add(this.txtBrand);
+            this.groupBox1.Controls.Add(this.txtModel);
+            this.groupBox1.Controls.Add(this.txtName);
+            this.groupBox1.Controls.Add(this.txtSN);
             this.groupBox1.Controls.Add(this.txtNote);
             this.groupBox1.Controls.Add(this.txtDetails);
             this.groupBox1.Controls.Add(this.label17);
@@ -83,16 +111,117 @@ namespace DevApp.Device
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "ข้อมูล";
             // 
-            // button1
+            // txtNTPKey
             // 
-            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.Location = new System.Drawing.Point(208, 538);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(88, 32);
-            this.button1.TabIndex = 39;
-            this.button1.Text = "บันทึก";
-            this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button1.UseVisualStyleBackColor = true;
+            this.txtNTPKey.Location = new System.Drawing.Point(309, 327);
+            this.txtNTPKey.Name = "txtNTPKey";
+            this.txtNTPKey.Size = new System.Drawing.Size(146, 20);
+            this.txtNTPKey.TabIndex = 52;
+            this.txtNTPKey.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // cbBranch
+            // 
+            this.cbBranch.FormattingEnabled = true;
+            this.cbBranch.Location = new System.Drawing.Point(108, 324);
+            this.cbBranch.Name = "cbBranch";
+            this.cbBranch.Size = new System.Drawing.Size(115, 21);
+            this.cbBranch.TabIndex = 51;
+            // 
+            // cbDepart
+            // 
+            this.cbDepart.FormattingEnabled = true;
+            this.cbDepart.Location = new System.Drawing.Point(309, 289);
+            this.cbDepart.Name = "cbDepart";
+            this.cbDepart.Size = new System.Drawing.Size(121, 21);
+            this.cbDepart.TabIndex = 50;
+            // 
+            // cbDevStatus
+            // 
+            this.cbDevStatus.FormattingEnabled = true;
+            this.cbDevStatus.Location = new System.Drawing.Point(108, 289);
+            this.cbDevStatus.Name = "cbDevStatus";
+            this.cbDevStatus.Size = new System.Drawing.Size(115, 21);
+            this.cbDevStatus.TabIndex = 49;
+            // 
+            // cbSubType
+            // 
+            this.cbSubType.FormattingEnabled = true;
+            this.cbSubType.Location = new System.Drawing.Point(309, 253);
+            this.cbSubType.Name = "cbSubType";
+            this.cbSubType.Size = new System.Drawing.Size(146, 21);
+            this.cbSubType.TabIndex = 48;
+            // 
+            // cbMainType
+            // 
+            this.cbMainType.FormattingEnabled = true;
+            this.cbMainType.Location = new System.Drawing.Point(108, 253);
+            this.cbMainType.Name = "cbMainType";
+            this.cbMainType.Size = new System.Drawing.Size(115, 21);
+            this.cbMainType.TabIndex = 47;
+            // 
+            // dtWarn_End
+            // 
+            this.dtWarn_End.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtWarn_End.Location = new System.Drawing.Point(309, 115);
+            this.dtWarn_End.Name = "dtWarn_End";
+            this.dtWarn_End.Size = new System.Drawing.Size(146, 20);
+            this.dtWarn_End.TabIndex = 46;
+            // 
+            // dtWarn_Start
+            // 
+            this.dtWarn_Start.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtWarn_Start.Location = new System.Drawing.Point(105, 115);
+            this.dtWarn_Start.Name = "dtWarn_Start";
+            this.dtWarn_Start.Size = new System.Drawing.Size(118, 20);
+            this.dtWarn_Start.TabIndex = 45;
+            // 
+            // dtDateIn
+            // 
+            this.dtDateIn.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtDateIn.Location = new System.Drawing.Point(309, 87);
+            this.dtDateIn.Name = "dtDateIn";
+            this.dtDateIn.Size = new System.Drawing.Size(146, 20);
+            this.dtDateIn.TabIndex = 44;
+            // 
+            // txtPrice
+            // 
+            this.txtPrice.Location = new System.Drawing.Point(105, 90);
+            this.txtPrice.Name = "txtPrice";
+            this.txtPrice.Size = new System.Drawing.Size(146, 20);
+            this.txtPrice.TabIndex = 43;
+            this.txtPrice.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // txtBrand
+            // 
+            this.txtBrand.Location = new System.Drawing.Point(309, 57);
+            this.txtBrand.Name = "txtBrand";
+            this.txtBrand.Size = new System.Drawing.Size(146, 20);
+            this.txtBrand.TabIndex = 42;
+            this.txtBrand.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // txtModel
+            // 
+            this.txtModel.Location = new System.Drawing.Point(105, 57);
+            this.txtModel.Name = "txtModel";
+            this.txtModel.Size = new System.Drawing.Size(146, 20);
+            this.txtModel.TabIndex = 41;
+            this.txtModel.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // txtName
+            // 
+            this.txtName.Location = new System.Drawing.Point(309, 25);
+            this.txtName.Name = "txtName";
+            this.txtName.Size = new System.Drawing.Size(194, 20);
+            this.txtName.TabIndex = 40;
+            this.txtName.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // txtSN
+            // 
+            this.txtSN.Location = new System.Drawing.Point(105, 25);
+            this.txtSN.Name = "txtSN";
+            this.txtSN.Size = new System.Drawing.Size(146, 20);
+            this.txtSN.TabIndex = 39;
+            this.txtSN.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // txtNote
             // 
@@ -254,6 +383,18 @@ namespace DevApp.Device
             this.label2.TabIndex = 0;
             this.label2.Text = "ซีเรียลนัมเบอร์ :";
             // 
+            // button1
+            // 
+            this.button1.Image = global::DevApp.Properties.Resources.Save;
+            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button1.Location = new System.Drawing.Point(208, 538);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(88, 32);
+            this.button1.TabIndex = 39;
+            this.button1.Text = "บันทึก";
+            this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.button1.UseVisualStyleBackColor = true;
+            // 
             // panel1
             // 
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
@@ -298,6 +439,7 @@ namespace DevApp.Device
             this.Name = "FmDevEdit";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ITDevice แก้ไขข้อมูล";
+            this.Load += new System.EventHandler(this.FmDevEdit_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.panel1.ResumeLayout(false);
@@ -331,5 +473,19 @@ namespace DevApp.Device
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox txtSN;
+        private System.Windows.Forms.TextBox txtNTPKey;
+        private System.Windows.Forms.ComboBox cbBranch;
+        private System.Windows.Forms.ComboBox cbDepart;
+        private System.Windows.Forms.ComboBox cbDevStatus;
+        private System.Windows.Forms.ComboBox cbSubType;
+        private System.Windows.Forms.ComboBox cbMainType;
+        private System.Windows.Forms.DateTimePicker dtWarn_End;
+        private System.Windows.Forms.DateTimePicker dtWarn_Start;
+        private System.Windows.Forms.DateTimePicker dtDateIn;
+        private System.Windows.Forms.TextBox txtPrice;
+        private System.Windows.Forms.TextBox txtBrand;
+        private System.Windows.Forms.TextBox txtModel;
+        private System.Windows.Forms.TextBox txtName;
     }
 }
