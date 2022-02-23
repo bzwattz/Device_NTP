@@ -57,6 +57,10 @@ namespace DevApp
                 MessageBox.Show("ทำรายการสำเร็จ","Information",MessageBoxButtons.OK,MessageBoxIcon.Information);
                 this.Close();
             }
+            else
+            {
+                MessageBox.Show("Serial Key อุปกรณ์ซ้ำโปรดตรวจสอบข้อมูล", "Information", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
         }
 
         private void FmNewDev_Load(object sender, EventArgs e)

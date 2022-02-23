@@ -158,6 +158,7 @@ namespace DevApp.Device
             this.cbMainType.Name = "cbMainType";
             this.cbMainType.Size = new System.Drawing.Size(115, 21);
             this.cbMainType.TabIndex = 47;
+            this.cbMainType.SelectionChangeCommitted += new System.EventHandler(this.cbMainType_SelectionChangeCommitted);
             // 
             // dtWarn_End
             // 
@@ -394,6 +395,7 @@ namespace DevApp.Device
             this.button1.Text = "บันทึก";
             this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // panel1
             // 

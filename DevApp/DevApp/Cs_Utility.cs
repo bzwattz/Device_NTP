@@ -12,30 +12,38 @@ namespace DevApp
     {
         public bool AddDevice(tb_Device dataModel)
         {
-            bool result = false;           
-            using (TransactionScope tran1 = new TransactionScope())
+            bool result = false;
+            using (DevAppModel context = new DevAppModel())
             {
-                using (DevAppModel context = new DevAppModel())
+                var obj = context.tb_Device.Where(f => f.Dev_SN == dataModel.Dev_SN).SingleOrDefault();
+                if (obj == null)
                 {
-                    try
+                    using (TransactionScope tran1 = new TransactionScope())
                     {
-                        context.tb_Device.Add(dataModel);
-                        context.SaveChanges();
-                        tran1.Complete();
-                    }
-                    catch (Exception)
-                    {
+                        using (DevAppModel context0 = new DevAppModel())
+                        {
+                            try
+                            {
+                                context0.tb_Device.Add(dataModel);
+                                context0.SaveChanges();
+                                tran1.Complete();
+                            }
+                            catch (Exception)
+                            {
 
-                    }
-                    finally
-                    {
-                        result = true;
-                        context.Database.Connection.Close();
-                        context.Dispose();
-                        tran1.Dispose();
+                            }
+                            finally
+                            {
+                                result = true;
+                                context0.Database.Connection.Close();
+                                context0.Dispose();
+                                tran1.Dispose();
+                            }
+                        }
                     }
                 }
             }
+            
             return result;
         }
         public bool DeleteDevice(int KeyID)
@@ -83,29 +91,26 @@ namespace DevApp
                         var item = context.tb_Device.Where(f => f.Dev_id == dataModel.Dev_id).SingleOrDefault();
                         if (item != null)
                         {
-                            tb_Device data = new tb_Device()
-                            {
-                                Dev_id = dataModel.Dev_id,
-                                Dev_SN = dataModel.Dev_SN,
-                                Dev_Name = dataModel.Dev_Name,
-                                Dev_Model = dataModel.Dev_Model,
-                                Dev_Brand = dataModel.Dev_Brand,
-                                Dev_Spec = dataModel.Dev_Spec,
-                                Dev_Price = dataModel.Dev_Price,
-                                Date_IN = dataModel.Date_IN,
-                                Warn_Start = dataModel.Warn_Start,
-                                Warn_End = dataModel.Warn_End,
-                                Dev_Note = dataModel.Dev_Note,
-                                Dev_NTP_Key = dataModel.Dev_NTP_Key,
-                                User_id = dataModel.User_id,
-                                Dev_S_ID = dataModel.Dev_S_ID,
-                                Dep_id = dataModel.Dep_id,
-                                branch_id = dataModel.branch_id,
-                                Type_id = dataModel.Type_id,
-                                ST_ID = dataModel.ST_ID,
-                                Des_Date = dataModel.Des_Date
-                            };
-                        }
+                            item.Dev_id = dataModel.Dev_id;
+                                item.Dev_SN = dataModel.Dev_SN;
+                            item.Dev_Name = dataModel.Dev_Name;
+                            item.Dev_Model = dataModel.Dev_Model;
+                            item.Dev_Brand = dataModel.Dev_Brand;
+                            item.Dev_Spec = dataModel.Dev_Spec;
+                            item.Dev_Price = dataModel.Dev_Price;
+                            item.Date_IN = dataModel.Date_IN;
+                            item.Warn_Start = dataModel.Warn_Start;
+                            item.Warn_End = dataModel.Warn_End;
+                            item.Dev_Note = dataModel.Dev_Note;
+                            item.Dev_NTP_Key = dataModel.Dev_NTP_Key;
+                            item.User_id = dataModel.User_id;
+                            item.Dev_S_ID = dataModel.Dev_S_ID;
+                            item.Dep_id = dataModel.Dep_id;
+                            item.branch_id = dataModel.branch_id;
+                            item.Type_id = dataModel.Type_id;
+                            item.ST_ID = dataModel.ST_ID;
+                            item.Des_Date = dataModel.Des_Date;
+                        };
                         context.SaveChanges();
                         tran1.Complete();
                     }
@@ -122,7 +127,8 @@ namespace DevApp
                     }
                 }
             }
-            return Result;
+            
+                return Result;
         }
         string Str_Status;
         public string GET_StatusName(int Status_ID)
@@ -175,6 +181,7 @@ namespace DevApp
             }
             return Str_Sub_Type;
         }
+        
         
     }
 }
