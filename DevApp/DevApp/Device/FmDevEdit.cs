@@ -107,12 +107,13 @@ namespace DevApp.Device
                 Warn_End = dtWarn_End.Value.Date,
                 Dev_Note = txtNote.Text,
                 Dev_NTP_Key = txtNTPKey.Text,
-                User_id = 1,
+                User_id = PublicVal.LoginID,
                 Dep_id = cbDepart.SelectedValue.ToString(),
                 branch_id = Convert.ToInt32(cbBranch.SelectedValue),
                 Type_id = Convert.ToInt32(cbBranch.SelectedValue),
                 ST_ID = Convert.ToInt32(cbSubType.SelectedValue),
-                
+                Dev_S_ID = Convert.ToInt32(cbDevStatus.SelectedValue),
+                Des_Date = DateTime.Now
             };
             var result = cU.ModifyDevice(DV);
             if (result == true)
@@ -135,6 +136,11 @@ namespace DevApp.Device
             cbSubType.DataSource = ds1;
             cbSubType.ValueMember = "ST_ID";
             cbSubType.DisplayMember = "ST_Name";
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {            
+            this.Close();
         }
     }
 }

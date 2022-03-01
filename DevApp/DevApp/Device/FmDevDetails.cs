@@ -80,5 +80,47 @@ namespace DevApp.Device
             FmDevEdit fmDevEdit = new FmDevEdit();
             fmDevEdit.ShowDialog();
         }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            DialogResult dialogResult = MessageBox.Show("ต้องการลบข้อมูลหรือไม่", "Confirm", MessageBoxButtons.YesNo);
+            if (dialogResult == DialogResult.Yes)
+            {
+                var EE = CU.DeleteDevice(PublicVal.DevID);
+                if (EE == true)
+                {
+                    MessageBox.Show("ลบข้อมูลสำเร็จ", "Message!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                else
+                {
+                    MessageBox.Show("ไม่สามารถลบข้อมูลได้", "Message!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+            else if (dialogResult == DialogResult.No)
+            {
+                //do something else
+            }
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            DialogResult dialogResult = MessageBox.Show("ต้องการลบข้อมูลหรือไม่", "Confirm", MessageBoxButtons.YesNo);
+            if (dialogResult == DialogResult.Yes)
+            {
+                var EE = CU.MoveTo_Destroy(PublicVal.DevID);
+                if (EE == true)
+                {
+                    MessageBox.Show("สำเร็จ", "Message!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                else
+                {
+                    MessageBox.Show("ไม่สามารถลบข้อมูลได้", "Message!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+            else if (dialogResult == DialogResult.No)
+            {
+                //do something else
+            }
+        }
     }
 }

@@ -71,8 +71,13 @@ namespace DevApp
             this.label2 = new System.Windows.Forms.Label();
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
+            this.ckMode = new System.Windows.Forms.CheckBox();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.gridSN = new System.Windows.Forms.DataGridView();
             this.panel1.SuspendLayout();
             this.groupBox1.SuspendLayout();
+            this.groupBox2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.gridSN)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -482,17 +487,52 @@ namespace DevApp
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
+            // ckMode
+            // 
+            this.ckMode.AutoSize = true;
+            this.ckMode.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.ckMode.Location = new System.Drawing.Point(463, 494);
+            this.ckMode.Name = "ckMode";
+            this.ckMode.Size = new System.Drawing.Size(193, 20);
+            this.ckMode.TabIndex = 4;
+            this.ckMode.Text = "อุปกรณ์ชนิดเดียวกันหลายรายการ >>";
+            this.ckMode.UseVisualStyleBackColor = false;
+            this.ckMode.CheckedChanged += new System.EventHandler(this.ckMode_CheckedChanged);
+            // 
+            // groupBox2
+            // 
+            this.groupBox2.Controls.Add(this.gridSN);
+            this.groupBox2.Location = new System.Drawing.Point(596, 74);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(215, 414);
+            this.groupBox2.TabIndex = 5;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "เพิ่ม SN";
+            // 
+            // gridSN
+            // 
+            this.gridSN.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.gridSN.Location = new System.Drawing.Point(6, 21);
+            this.gridSN.Name = "gridSN";
+            this.gridSN.Size = new System.Drawing.Size(200, 387);
+            this.gridSN.TabIndex = 0;
+            // 
             // FmNewDev
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(588, 548);
+            this.ClientSize = new System.Drawing.Size(823, 548);
+            this.Controls.Add(this.groupBox2);
+            this.Controls.Add(this.ckMode);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.panel1);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Margin = new System.Windows.Forms.Padding(4);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "FmNewDev";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ITDevice-เพิ่มข้อมูลอุปกรณ์";
@@ -501,7 +541,10 @@ namespace DevApp
             this.panel1.PerformLayout();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            this.groupBox2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.gridSN)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -549,5 +592,8 @@ namespace DevApp
         private System.Windows.Forms.TextBox txtStoreName;
         private System.Windows.Forms.Label label19;
         private System.Windows.Forms.Label label18;
+        private System.Windows.Forms.CheckBox ckMode;
+        private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.DataGridView gridSN;
     }
 }

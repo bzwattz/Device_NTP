@@ -38,3 +38,7 @@ E:\Project\ntp_Dev\Device_NTP\DevApp\DevApp\obj\Debug\DevApp.Device.FmDevDetails
 E:\Project\ntp_Dev\Device_NTP\DevApp\DevApp\obj\Debug\DevApp.Device.FmDevEdit.resources
 E:\it_natthapong\Device_NTP\DevApp\DevApp\obj\Debug\DevApp.Device.FmDevDetails.resources
 E:\it_natthapong\Device_NTP\DevApp\DevApp\obj\Debug\DevApp.Device.FmDevEdit.resources
+E:\Project\ntp_Dev\Device_NTP\DevApp\DevApp\bin\Debug\DevApp.exe.manifest
+E:\Project\ntp_Dev\Device_NTP\DevApp\DevApp\bin\Debug\DevApp.application
+E:\Project\ntp_Dev\Device_NTP\DevApp\DevApp\obj\Debug\DevApp.exe.manifest
+E:\Project\ntp_Dev\Device_NTP\DevApp\DevApp\obj\Debug\DevApp.application

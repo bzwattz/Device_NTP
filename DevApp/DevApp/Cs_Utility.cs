@@ -181,6 +181,36 @@ namespace DevApp
             }
             return Str_Sub_Type;
         }
+        public bool MoveTo_Destroy(int DevID)
+        {
+            bool Result = false;
+            using (DevAppModel db = new DevAppModel())
+            {
+                DateTime NowDT = DateTime.Now;
+                var obj = db.tb_Device.Where(f => f.Dev_id == DevID).SingleOrDefault();
+                if (obj != null)
+                {
+                    obj.Des_Date = NowDT;
+                    obj.Dev_S_ID = 5;
+                    using (DevAppModel context = new DevAppModel())
+                    {
+                        tb_Destroy dst = new tb_Destroy()
+                        {
+                            Dev_id = obj.Dev_id,
+                            Des_Date = NowDT,
+                            Des_Reson = "",
+                            User_id = PublicVal.LoginID
+                        };
+                        context.tb_Destroy.Add(dst);
+                        context.SaveChanges();
+                    }
+                }
+                db.SaveChanges();
+                Result = true;
+            }
+            return Result;
+            
+        }
         
         
     }
