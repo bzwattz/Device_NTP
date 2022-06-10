@@ -106,6 +106,35 @@ namespace DevApp.Device
                 }
             }
         }
+        void Search_Data_N(string DevName)
+        {
+            gridData.Rows.Clear();
+            using (DevAppModel DA = new DevAppModel())
+            {
+                var DeviceList = DA.tb_Device.Where(f => f.Dev_Name.Contains(DevName)).ToList(); // Mean = Like
+                if (DeviceList != null)
+                {
+                    foreach (var item in DeviceList)
+                    {
+                        gridData.Rows.Add();
+                        gridData.Rows[RowIndex].Cells[0].Value = item.Dev_id;
+                        gridData.Rows[RowIndex].Cells[1].Value = item.Dev_Name;
+                        gridData.Rows[RowIndex].Cells[2].Value = item.Dev_SN;
+                        gridData.Rows[RowIndex].Cells[3].Value = Convert.ToDecimal(item.Dev_Price).ToString("#,##0.##");
+                        gridData.Rows[RowIndex].Cells[4].Value = CU.GET_StatusName(Convert.ToInt32(item.Dev_S_ID));
+                        gridData.Rows[RowIndex].Cells[5].Value = CU.GET_DepartName(item.Dep_id);
+                        var data = CU.GET_BranchData(Convert.ToInt32(item.branch_id));
+                        gridData.Rows[RowIndex].Cells[6].Value = data[0];
+                        RowIndex += 1;
+                        TotalVal = TotalVal + Convert.ToDecimal(item.Dev_Price);
+                    }
+                    RowIndex = 0;
+                    label1.Text = "จำนวนทั้งหมด : " + (gridData.Rows.Count - 1).ToString() + " รายการ";
+                    label2.Text = "มูลค่ารวม : " + TotalVal.ToString("#,##0.##") + " บาท";
+                    TotalVal = 0;
+                }
+            }
+        }
         private void button1_Click(object sender, EventArgs e)
         {
             this.Close();
@@ -113,7 +142,7 @@ namespace DevApp.Device
 
         private void txtSN_TextChanged(object sender, EventArgs e)
         {
-            Search_Data(txtSN.Text);
+            
         }
 
         private void gridData_DoubleClick(object sender, EventArgs e)
@@ -127,6 +156,43 @@ namespace DevApp.Device
             PublicVal.DevID = Convert.ToInt32(gridData.CurrentRow.Cells[0].Value);
             FmDevDetails fmDevDetails = new FmDevDetails();
             fmDevDetails.ShowDialog();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            if (ckName.Checked == true)
+            {
+                Search_Data_N(txtSN.Text);
+
+            }else if (ckSN.Checked == true)
+            {
+               
+                Search_Data(txtSN.Text);
+            }
+            
+        }
+
+        private void ckName_CheckedChanged(object sender, EventArgs e)
+        {
+            if (ckName.Checked == true)
+            {
+                ckSN.Checked = false;
+                txtSN.Text = "";
+            }
+            else
+            {
+
+            }
+        }
+
+        private void ckSN_CheckedChanged(object sender, EventArgs e)
+        {
+            if (ckSN.Checked ==true)
+            {
+                ckName.Checked = false;
+                txtSN.Text = "";
+
+            }
         }
     }
 }

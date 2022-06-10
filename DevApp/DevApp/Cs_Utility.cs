@@ -88,29 +88,31 @@ namespace DevApp
                 {
                     try
                     {
-                        var item = context.tb_Device.Where(f => f.Dev_id == dataModel.Dev_id).SingleOrDefault();
-                        if (item != null)
-                        {
-                            item.Dev_id = dataModel.Dev_id;
-                                item.Dev_SN = dataModel.Dev_SN;
-                            item.Dev_Name = dataModel.Dev_Name;
-                            item.Dev_Model = dataModel.Dev_Model;
-                            item.Dev_Brand = dataModel.Dev_Brand;
-                            item.Dev_Spec = dataModel.Dev_Spec;
-                            item.Dev_Price = dataModel.Dev_Price;
-                            item.Date_IN = dataModel.Date_IN;
-                            item.Warn_Start = dataModel.Warn_Start;
-                            item.Warn_End = dataModel.Warn_End;
-                            item.Dev_Note = dataModel.Dev_Note;
-                            item.Dev_NTP_Key = dataModel.Dev_NTP_Key;
-                            item.User_id = dataModel.User_id;
-                            item.Dev_S_ID = dataModel.Dev_S_ID;
-                            item.Dep_id = dataModel.Dep_id;
-                            item.branch_id = dataModel.branch_id;
-                            item.Type_id = dataModel.Type_id;
-                            item.ST_ID = dataModel.ST_ID;
-                            item.Des_Date = dataModel.Des_Date;
-                        };
+                        //var item = context.tb_Device.Where(f => f.Dev_id == dataModel.Dev_id).SingleOrDefault();
+                        //if (item != null)
+                        //{
+                        //    item.Dev_id = dataModel.Dev_id;
+                        //        item.Dev_SN = dataModel.Dev_SN;
+                        //    item.Dev_Name = dataModel.Dev_Name;
+                        //    item.Dev_Model = dataModel.Dev_Model;
+                        //    item.Dev_Brand = dataModel.Dev_Brand;
+                        //    item.Dev_Spec = dataModel.Dev_Spec;
+                        //    item.Dev_Price = dataModel.Dev_Price;
+                        //    item.Date_IN = dataModel.Date_IN;
+                        //    item.Warn_Start = dataModel.Warn_Start;
+                        //    item.Warn_End = dataModel.Warn_End;
+                        //    item.Dev_Note = dataModel.Dev_Note;
+                        //    item.Dev_NTP_Key = dataModel.Dev_NTP_Key;
+                        //    item.User_id = dataModel.User_id;
+                        //    item.Dev_S_ID = dataModel.Dev_S_ID;
+                        //    item.Dep_id = dataModel.Dep_id;
+                        //    item.branch_id = dataModel.branch_id;
+                        //    item.Type_id = dataModel.Type_id;
+                        //    item.ST_ID = dataModel.ST_ID;
+                        //    item.Des_Date = dataModel.Des_Date;
+                        //};
+                        context.tb_Device.Add(dataModel);
+                        context.Entry(dataModel).State = System.Data.Entity.EntityState.Modified;
                         context.SaveChanges();
                         tran1.Complete();
                     }

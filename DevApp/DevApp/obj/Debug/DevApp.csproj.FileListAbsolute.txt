@@ -42,3 +42,6 @@ E:\Project\ntp_Dev\Device_NTP\DevApp\DevApp\bin\Debug\DevApp.exe.manifest
 E:\Project\ntp_Dev\Device_NTP\DevApp\DevApp\bin\Debug\DevApp.application
 E:\Project\ntp_Dev\Device_NTP\DevApp\DevApp\obj\Debug\DevApp.exe.manifest
 E:\Project\ntp_Dev\Device_NTP\DevApp\DevApp\obj\Debug\DevApp.application
+E:\Project\ntp_Dev\Device_NTP\DevApp\DevApp\bin\Debug\MetroFramework.dll
+E:\Project\ntp_Dev\Device_NTP\DevApp\DevApp\bin\Debug\MetroFramework.Fonts.dll
+E:\Project\ntp_Dev\Device_NTP\DevApp\DevApp\obj\Debug\DevApp.Device.FmDevMove.resources

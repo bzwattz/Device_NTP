@@ -7,14 +7,14 @@
     <framework targetVersion="4.7.2" profile="Full" supportedRuntime="4.0.30319" />
   </compatibleFrameworks>
   <dependency>
-    <dependentAssembly dependencyType="install" codebase="DevApp.exe.manifest" size="5369">
+    <dependentAssembly dependencyType="install" codebase="DevApp.exe.manifest" size="7139">
       <assemblyIdentity name="DevApp.exe" version="1.0.0.3" publicKeyToken="0000000000000000" language="neutral" processorArchitecture="msil" type="win32" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>5JfdYs7uIdQ7kXDZ+Ip+PgvO5FzoyA527dvWVTvZ/y0=</dsig:DigestValue>
+        <dsig:DigestValue>y3NWtEZwqkV06G4KseGXy6xy7wkkmOC7+96tCxUbhhE=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

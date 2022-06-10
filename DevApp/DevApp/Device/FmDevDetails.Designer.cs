@@ -32,6 +32,9 @@ namespace DevApp.Device
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.button4 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             this.txtNote = new System.Windows.Forms.RichTextBox();
             this.txtDetails = new System.Windows.Forms.RichTextBox();
             this.label32 = new System.Windows.Forms.Label();
@@ -65,27 +68,26 @@ namespace DevApp.Device
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.button2 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
             // 
+            this.panel1.BackColor = System.Drawing.SystemColors.Control;
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel1.Controls.Add(this.label1);
             this.panel1.Location = new System.Drawing.Point(12, 12);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(564, 47);
+            this.panel1.Size = new System.Drawing.Size(728, 47);
             this.panel1.TabIndex = 1;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(191, 10);
+            this.label1.ForeColor = System.Drawing.Color.Black;
+            this.label1.Location = new System.Drawing.Point(13, 10);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(142, 24);
             this.label1.TabIndex = 1;
@@ -130,16 +132,56 @@ namespace DevApp.Device
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Location = new System.Drawing.Point(12, 63);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(564, 471);
+            this.groupBox1.Size = new System.Drawing.Size(728, 471);
             this.groupBox1.TabIndex = 2;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "ข้อมูล";
+            // 
+            // button4
+            // 
+            this.button4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.button4.Image = global::DevApp.Properties.Resources.Abort;
+            this.button4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button4.Location = new System.Drawing.Point(403, 423);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(100, 32);
+            this.button4.TabIndex = 41;
+            this.button4.Text = "เลิกใช้งาน";
+            this.button4.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.button4.UseVisualStyleBackColor = false;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
+            // 
+            // button3
+            // 
+            this.button3.Image = global::DevApp.Properties.Resources.Delete;
+            this.button3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button3.Location = new System.Drawing.Point(309, 423);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(88, 32);
+            this.button3.TabIndex = 40;
+            this.button3.Text = "ลบ";
+            this.button3.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
+            // 
+            // button1
+            // 
+            this.button1.Image = global::DevApp.Properties.Resources.Modify;
+            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button1.Location = new System.Drawing.Point(215, 423);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(88, 32);
+            this.button1.TabIndex = 39;
+            this.button1.Text = "แก้ไข";
+            this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // txtNote
             // 
             this.txtNote.Location = new System.Drawing.Point(108, 360);
             this.txtNote.Name = "txtNote";
-            this.txtNote.Size = new System.Drawing.Size(395, 57);
+            this.txtNote.Size = new System.Drawing.Size(584, 57);
             this.txtNote.TabIndex = 38;
             this.txtNote.Text = "";
             // 
@@ -147,7 +189,7 @@ namespace DevApp.Device
             // 
             this.txtDetails.Location = new System.Drawing.Point(108, 157);
             this.txtDetails.Name = "txtDetails";
-            this.txtDetails.Size = new System.Drawing.Size(395, 81);
+            this.txtDetails.Size = new System.Drawing.Size(584, 81);
             this.txtDetails.TabIndex = 37;
             this.txtDetails.Text = "";
             // 
@@ -165,7 +207,7 @@ namespace DevApp.Device
             // 
             this.label31.AutoSize = true;
             this.label31.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label31.Location = new System.Drawing.Point(311, 327);
+            this.label31.Location = new System.Drawing.Point(372, 327);
             this.label31.Name = "label31";
             this.label31.Size = new System.Drawing.Size(52, 16);
             this.label31.TabIndex = 34;
@@ -175,7 +217,7 @@ namespace DevApp.Device
             // 
             this.label30.AutoSize = true;
             this.label30.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label30.Location = new System.Drawing.Point(309, 292);
+            this.label30.Location = new System.Drawing.Point(370, 292);
             this.label30.Name = "label30";
             this.label30.Size = new System.Drawing.Size(52, 16);
             this.label30.TabIndex = 33;
@@ -195,7 +237,7 @@ namespace DevApp.Device
             // 
             this.label28.AutoSize = true;
             this.label28.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label28.Location = new System.Drawing.Point(309, 256);
+            this.label28.Location = new System.Drawing.Point(370, 256);
             this.label28.Name = "label28";
             this.label28.Size = new System.Drawing.Size(52, 16);
             this.label28.TabIndex = 31;
@@ -215,7 +257,7 @@ namespace DevApp.Device
             // 
             this.label25.AutoSize = true;
             this.label25.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label25.Location = new System.Drawing.Point(316, 121);
+            this.label25.Location = new System.Drawing.Point(372, 121);
             this.label25.Name = "label25";
             this.label25.Size = new System.Drawing.Size(52, 16);
             this.label25.TabIndex = 28;
@@ -235,7 +277,7 @@ namespace DevApp.Device
             // 
             this.label23.AutoSize = true;
             this.label23.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label23.Location = new System.Drawing.Point(316, 93);
+            this.label23.Location = new System.Drawing.Point(372, 93);
             this.label23.Name = "label23";
             this.label23.Size = new System.Drawing.Size(52, 16);
             this.label23.TabIndex = 26;
@@ -255,7 +297,7 @@ namespace DevApp.Device
             // 
             this.label21.AutoSize = true;
             this.label21.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label21.Location = new System.Drawing.Point(316, 60);
+            this.label21.Location = new System.Drawing.Point(372, 60);
             this.label21.Name = "label21";
             this.label21.Size = new System.Drawing.Size(52, 16);
             this.label21.TabIndex = 24;
@@ -275,7 +317,7 @@ namespace DevApp.Device
             // 
             this.label19.AutoSize = true;
             this.label19.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label19.Location = new System.Drawing.Point(316, 28);
+            this.label19.Location = new System.Drawing.Point(372, 28);
             this.label19.Name = "label19";
             this.label19.Size = new System.Drawing.Size(52, 16);
             this.label19.TabIndex = 22;
@@ -303,7 +345,7 @@ namespace DevApp.Device
             // label16
             // 
             this.label16.AutoSize = true;
-            this.label16.Location = new System.Drawing.Point(262, 292);
+            this.label16.Location = new System.Drawing.Point(323, 292);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(43, 13);
             this.label16.TabIndex = 19;
@@ -321,7 +363,7 @@ namespace DevApp.Device
             // label14
             // 
             this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(225, 256);
+            this.label14.Location = new System.Drawing.Point(286, 256);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(73, 13);
             this.label14.TabIndex = 17;
@@ -339,7 +381,7 @@ namespace DevApp.Device
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(225, 327);
+            this.label12.Location = new System.Drawing.Point(286, 327);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(74, 13);
             this.label12.TabIndex = 12;
@@ -357,7 +399,7 @@ namespace DevApp.Device
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(229, 121);
+            this.label10.Location = new System.Drawing.Point(285, 121);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(81, 13);
             this.label10.TabIndex = 9;
@@ -375,7 +417,7 @@ namespace DevApp.Device
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(256, 93);
+            this.label8.Location = new System.Drawing.Point(312, 93);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(47, 13);
             this.label8.TabIndex = 7;
@@ -402,7 +444,7 @@ namespace DevApp.Device
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(270, 60);
+            this.label5.Location = new System.Drawing.Point(326, 60);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(33, 13);
             this.label5.TabIndex = 3;
@@ -420,7 +462,7 @@ namespace DevApp.Device
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(277, 28);
+            this.label3.Location = new System.Drawing.Point(333, 28);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(26, 13);
             this.label3.TabIndex = 1;
@@ -439,7 +481,7 @@ namespace DevApp.Device
             // 
             this.button2.Image = global::DevApp.Properties.Resources.Close;
             this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button2.Location = new System.Drawing.Point(258, 540);
+            this.button2.Location = new System.Drawing.Point(317, 545);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(88, 32);
             this.button2.TabIndex = 4;
@@ -448,50 +490,11 @@ namespace DevApp.Device
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
-            // button4
-            // 
-            this.button4.Image = global::DevApp.Properties.Resources.Abort;
-            this.button4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button4.Location = new System.Drawing.Point(326, 423);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(100, 32);
-            this.button4.TabIndex = 41;
-            this.button4.Text = "เลิกใช้งาน";
-            this.button4.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button4.UseVisualStyleBackColor = true;
-            this.button4.Click += new System.EventHandler(this.button4_Click);
-            // 
-            // button3
-            // 
-            this.button3.Image = global::DevApp.Properties.Resources.Delete;
-            this.button3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button3.Location = new System.Drawing.Point(232, 423);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(88, 32);
-            this.button3.TabIndex = 40;
-            this.button3.Text = "ลบ";
-            this.button3.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
-            // 
-            // button1
-            // 
-            this.button1.Image = global::DevApp.Properties.Resources.Modify;
-            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.Location = new System.Drawing.Point(138, 423);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(88, 32);
-            this.button1.TabIndex = 39;
-            this.button1.Text = "แก้ไข";
-            this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
             // FmDevDetails
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(588, 582);
+            this.ClientSize = new System.Drawing.Size(754, 589);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.panel1);

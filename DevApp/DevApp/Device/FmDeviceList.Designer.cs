@@ -39,8 +39,9 @@ namespace DevApp.Device
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.button2 = new System.Windows.Forms.Button();
             this.txtSN = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
+            this.ckName = new System.Windows.Forms.CheckBox();
+            this.ckSN = new System.Windows.Forms.CheckBox();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridData)).BeginInit();
             this.groupBox2.SuspendLayout();
@@ -119,7 +120,6 @@ namespace DevApp.Device
             // 
             this.groupBox3.Controls.Add(this.button2);
             this.groupBox3.Controls.Add(this.txtSN);
-            this.groupBox3.Controls.Add(this.label3);
             this.groupBox3.Location = new System.Drawing.Point(717, 12);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Size = new System.Drawing.Size(252, 58);
@@ -129,30 +129,22 @@ namespace DevApp.Device
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(185, 20);
+            this.button2.Location = new System.Drawing.Point(173, 20);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(60, 23);
             this.button2.TabIndex = 2;
             this.button2.Text = "OK";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // txtSN
             // 
-            this.txtSN.Location = new System.Drawing.Point(55, 22);
+            this.txtSN.Location = new System.Drawing.Point(43, 22);
             this.txtSN.Name = "txtSN";
             this.txtSN.Size = new System.Drawing.Size(125, 20);
             this.txtSN.TabIndex = 1;
             this.txtSN.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtSN.TextChanged += new System.EventHandler(this.txtSN_TextChanged);
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(21, 25);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(28, 13);
-            this.label3.TabIndex = 0;
-            this.label3.Text = "SN :";
             // 
             // button1
             // 
@@ -167,11 +159,37 @@ namespace DevApp.Device
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
+            // ckName
+            // 
+            this.ckName.AutoSize = true;
+            this.ckName.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.ckName.Location = new System.Drawing.Point(521, 38);
+            this.ckName.Name = "ckName";
+            this.ckName.Size = new System.Drawing.Size(72, 17);
+            this.ckName.TabIndex = 5;
+            this.ckName.Text = "ค้นจากชื่อ";
+            this.ckName.UseVisualStyleBackColor = false;
+            this.ckName.CheckedChanged += new System.EventHandler(this.ckName_CheckedChanged);
+            // 
+            // ckSN
+            // 
+            this.ckSN.AutoSize = true;
+            this.ckSN.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.ckSN.Location = new System.Drawing.Point(619, 38);
+            this.ckSN.Name = "ckSN";
+            this.ckSN.Size = new System.Drawing.Size(77, 17);
+            this.ckSN.TabIndex = 6;
+            this.ckSN.Text = "ค้นจาก SN";
+            this.ckSN.UseVisualStyleBackColor = false;
+            this.ckSN.CheckedChanged += new System.EventHandler(this.ckSN_CheckedChanged);
+            // 
             // FmDeviceList
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(980, 739);
+            this.Controls.Add(this.ckSN);
+            this.Controls.Add(this.ckName);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.statusStrip1);
             this.Controls.Add(this.button1);
@@ -208,6 +226,7 @@ namespace DevApp.Device
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.TextBox txtSN;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.CheckBox ckName;
+        private System.Windows.Forms.CheckBox ckSN;
     }
 }

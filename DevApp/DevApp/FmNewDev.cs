@@ -55,7 +55,7 @@ namespace DevApp
                         branch_id = Convert.ToInt32(cbBranch.SelectedValue),
                         Type_id = Convert.ToInt32(cbType.SelectedValue),
                         ST_ID = Convert.ToInt32(cbSub_Type.SelectedValue),
-                        Des_Date = nowDate
+                        Des_Date = null
                     };
                     CU.AddDevice(dataModel);
                     MessageBox.Show("ทำรายการสำเร็จ", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);

@@ -30,13 +30,6 @@ namespace DevApp
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.button6 = new System.Windows.Forms.Button();
-            this.button9 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
@@ -71,6 +64,13 @@ namespace DevApp
             this.แกไขToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ลบToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.button6 = new System.Windows.Forms.Button();
+            this.button9 = new System.Windows.Forms.Button();
+            this.button5 = new System.Windows.Forms.Button();
+            this.button4 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.statusStrip1.SuspendLayout();
             this.menuStrip1.SuspendLayout();
@@ -94,86 +94,6 @@ namespace DevApp
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "เมนู";
-            // 
-            // button6
-            // 
-            this.button6.Image = global::DevApp.Properties.Resources.Report;
-            this.button6.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button6.Location = new System.Drawing.Point(18, 232);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(172, 36);
-            this.button6.TabIndex = 9;
-            this.button6.Text = "รายงาน";
-            this.button6.UseVisualStyleBackColor = true;
-            // 
-            // button9
-            // 
-            this.button9.Image = global::DevApp.Properties.Resources.Close;
-            this.button9.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button9.Location = new System.Drawing.Point(18, 404);
-            this.button9.Name = "button9";
-            this.button9.Size = new System.Drawing.Size(172, 36);
-            this.button9.TabIndex = 8;
-            this.button9.Text = "ปิดโปรแกรม";
-            this.button9.UseVisualStyleBackColor = true;
-            this.button9.Click += new System.EventHandler(this.button9_Click);
-            // 
-            // button5
-            // 
-            this.button5.Image = global::DevApp.Properties.Resources.Zoom;
-            this.button5.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button5.Location = new System.Drawing.Point(18, 190);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(172, 36);
-            this.button5.TabIndex = 4;
-            this.button5.Text = "ค้นหา";
-            this.button5.UseVisualStyleBackColor = true;
-            // 
-            // button4
-            // 
-            this.button4.Image = global::DevApp.Properties.Resources.No_entry;
-            this.button4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button4.Location = new System.Drawing.Point(18, 148);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(172, 36);
-            this.button4.TabIndex = 3;
-            this.button4.Text = "จำหน่าย / ทำลาย";
-            this.button4.UseVisualStyleBackColor = true;
-            // 
-            // button3
-            // 
-            this.button3.Image = global::DevApp.Properties.Resources.Wrench;
-            this.button3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button3.Location = new System.Drawing.Point(18, 106);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(172, 36);
-            this.button3.TabIndex = 2;
-            this.button3.Text = "ซ่อมบำรุง";
-            this.button3.UseVisualStyleBackColor = true;
-            // 
-            // button2
-            // 
-            this.button2.Image = global::DevApp.Properties.Resources.About;
-            this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button2.Location = new System.Drawing.Point(18, 64);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(172, 36);
-            this.button2.TabIndex = 1;
-            this.button2.Text = "เบิกอุปกรณ์";
-            this.button2.UseVisualStyleBackColor = true;
-            // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.button1.Image = global::DevApp.Properties.Resources.Add;
-            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.Location = new System.Drawing.Point(18, 22);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(172, 36);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "เพิ่มข้อมูลอุปกรณ์";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // statusStrip1
             // 
@@ -221,26 +141,26 @@ namespace DevApp
             // 
             this.รายการอปกรณลาสดToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.รายการอปกรณลาสดToolStripMenuItem.Name = "รายการอปกรณลาสดToolStripMenuItem";
-            this.รายการอปกรณลาสดToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.รายการอปกรณลาสดToolStripMenuItem.Size = new System.Drawing.Size(140, 22);
             this.รายการอปกรณลาสดToolStripMenuItem.Text = "รายการทั้งหมด";
             this.รายการอปกรณลาสดToolStripMenuItem.Click += new System.EventHandler(this.รายการอปกรณลาสดToolStripMenuItem_Click);
             // 
             // โอนยายToolStripMenuItem
             // 
             this.โอนยายToolStripMenuItem.Name = "โอนยายToolStripMenuItem";
-            this.โอนยายToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.โอนยายToolStripMenuItem.Size = new System.Drawing.Size(140, 22);
             this.โอนยายToolStripMenuItem.Text = "โอน-ย้าย";
             // 
             // toolStripMenuItem1
             // 
             this.toolStripMenuItem1.Name = "toolStripMenuItem1";
-            this.toolStripMenuItem1.Size = new System.Drawing.Size(177, 6);
+            this.toolStripMenuItem1.Size = new System.Drawing.Size(137, 6);
             // 
             // ออกToolStripMenuItem
             // 
             this.ออกToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.ออกToolStripMenuItem.Name = "ออกToolStripMenuItem";
-            this.ออกToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.ออกToolStripMenuItem.Size = new System.Drawing.Size(140, 22);
             this.ออกToolStripMenuItem.Text = "ปิดโปรแกรม";
             this.ออกToolStripMenuItem.Click += new System.EventHandler(this.ออกToolStripMenuItem_Click);
             // 
@@ -369,7 +289,7 @@ namespace DevApp
             // สถานะอปกรณToolStripMenuItem
             // 
             this.สถานะอปกรณToolStripMenuItem.Name = "สถานะอปกรณToolStripMenuItem";
-            this.สถานะอปกรณToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.สถานะอปกรณToolStripMenuItem.Size = new System.Drawing.Size(139, 22);
             this.สถานะอปกรณToolStripMenuItem.Text = "สถานะอุปกรณ์";
             // 
             // ประเภทหลกToolStripMenuItem
@@ -429,6 +349,87 @@ namespace DevApp
             this.pictureBox1.Size = new System.Drawing.Size(650, 447);
             this.pictureBox1.TabIndex = 2;
             this.pictureBox1.TabStop = false;
+            // 
+            // button6
+            // 
+            this.button6.Image = global::DevApp.Properties.Resources.Report;
+            this.button6.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button6.Location = new System.Drawing.Point(18, 232);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(172, 36);
+            this.button6.TabIndex = 9;
+            this.button6.Text = "รายงาน";
+            this.button6.UseVisualStyleBackColor = true;
+            this.button6.Click += new System.EventHandler(this.button6_Click);
+            // 
+            // button9
+            // 
+            this.button9.Image = global::DevApp.Properties.Resources.Close;
+            this.button9.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button9.Location = new System.Drawing.Point(18, 404);
+            this.button9.Name = "button9";
+            this.button9.Size = new System.Drawing.Size(172, 36);
+            this.button9.TabIndex = 8;
+            this.button9.Text = "ปิดโปรแกรม";
+            this.button9.UseVisualStyleBackColor = true;
+            this.button9.Click += new System.EventHandler(this.button9_Click);
+            // 
+            // button5
+            // 
+            this.button5.Image = global::DevApp.Properties.Resources.Zoom;
+            this.button5.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button5.Location = new System.Drawing.Point(18, 190);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(172, 36);
+            this.button5.TabIndex = 4;
+            this.button5.Text = "ค้นหา";
+            this.button5.UseVisualStyleBackColor = true;
+            // 
+            // button4
+            // 
+            this.button4.Image = global::DevApp.Properties.Resources.No_entry;
+            this.button4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button4.Location = new System.Drawing.Point(18, 148);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(172, 36);
+            this.button4.TabIndex = 3;
+            this.button4.Text = "จำหน่าย / ทำลาย";
+            this.button4.UseVisualStyleBackColor = true;
+            // 
+            // button3
+            // 
+            this.button3.Image = global::DevApp.Properties.Resources.Wrench;
+            this.button3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button3.Location = new System.Drawing.Point(18, 106);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(172, 36);
+            this.button3.TabIndex = 2;
+            this.button3.Text = "ซ่อมบำรุง";
+            this.button3.UseVisualStyleBackColor = true;
+            // 
+            // button2
+            // 
+            this.button2.Image = global::DevApp.Properties.Resources.About;
+            this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button2.Location = new System.Drawing.Point(18, 64);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(172, 36);
+            this.button2.TabIndex = 1;
+            this.button2.Text = "เบิกอุปกรณ์";
+            this.button2.UseVisualStyleBackColor = true;
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.button1.Image = global::DevApp.Properties.Resources.Add;
+            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button1.Location = new System.Drawing.Point(18, 22);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(172, 36);
+            this.button1.TabIndex = 0;
+            this.button1.Text = "เพิ่มข้อมูลอุปกรณ์";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // FmMain
             // 

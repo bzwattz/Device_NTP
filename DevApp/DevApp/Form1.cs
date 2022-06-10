@@ -55,5 +55,11 @@ namespace DevApp
                 toolStripStatusLabel1.Text = "User Login : "+obj.Usr_name + " " + obj.Usr_lname + "[" + obj.Position + "]";
             }
         }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            FmDevMove fmDevMove = new FmDevMove();
+            fmDevMove.Show();
+        }
     }
 }

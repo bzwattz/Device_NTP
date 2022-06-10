@@ -20,7 +20,7 @@ namespace DevApp.Device
         private Cs_Utility cU = new Cs_Utility();
         private void FmDevEdit_Load(object sender, EventArgs e)
         {
-           Get_Dev_Stat(PublicVal.DevID);
+          
             //get maintype
             using (DevAppModel context = new DevAppModel())
             {
@@ -61,7 +61,7 @@ namespace DevApp.Device
                 cbBranch.ValueMember = "branch_id";
                 cbBranch.DisplayMember = "branch_name";
             }
-
+            Get_Dev_Stat(PublicVal.DevID);
         }
         void Get_Dev_Stat(int DevID)
         {
@@ -110,7 +110,7 @@ namespace DevApp.Device
                 User_id = PublicVal.LoginID,
                 Dep_id = cbDepart.SelectedValue.ToString(),
                 branch_id = Convert.ToInt32(cbBranch.SelectedValue),
-                Type_id = Convert.ToInt32(cbBranch.SelectedValue),
+                Type_id = Convert.ToInt32(cbMainType.SelectedValue),
                 ST_ID = Convert.ToInt32(cbSubType.SelectedValue),
                 Dev_S_ID = Convert.ToInt32(cbDevStatus.SelectedValue),
                 Des_Date = DateTime.Now

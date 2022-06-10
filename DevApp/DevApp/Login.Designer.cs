@@ -152,9 +152,10 @@ namespace DevApp
             // 
             // toolStripStatusLabel2
             // 
+            this.toolStripStatusLabel2.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.toolStripStatusLabel2.Name = "toolStripStatusLabel2";
             this.toolStripStatusLabel2.Size = new System.Drawing.Size(149, 17);
-            this.toolStripStatusLabel2.Text = "IT Device Data Version 1.0.0";
+            this.toolStripStatusLabel2.Text = "IT Device Data Version 1.0.1";
             // 
             // Login
             // 
