@@ -43,14 +43,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="DevApp.exe" size="449976">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="DevApp.exe" size="451000">
       <assemblyIdentity name="DevApp" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>CXdAlmklfY5aPX1nwnwl8iTXjBqmsNYLY0GzXVASR6M=</dsig:DigestValue>
+        <dsig:DigestValue>Ja4+cO/bvEIcbs0uRZ2Tj4rU8MPMA5DFwu6qPasPGng=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

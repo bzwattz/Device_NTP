@@ -56,6 +56,7 @@ namespace DevApp.Device
                 var DeviceList = DA.tb_Device.OrderByDescending(f=>f.Dev_id).Take(500).ToList();
                 if (DeviceList != null)
                 {
+                    gridData.Rows.Clear();
                     foreach (var item in DeviceList)
                     {
                         gridData.Rows.Add();
@@ -192,6 +193,36 @@ namespace DevApp.Device
                 ckName.Checked = false;
                 txtSN.Text = "";
 
+            }
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            using (DevAppModel DA = new DevAppModel())
+            {
+                var DeviceList = DA.tb_Device.OrderByDescending(f => f.Dev_id).Take(1000).ToList();
+                if (DeviceList != null)
+                {
+                    gridData.Rows.Clear();
+                    foreach (var item in DeviceList)
+                    {
+                        gridData.Rows.Add();
+                        gridData.Rows[RowIndex].Cells[0].Value = item.Dev_id;
+                        gridData.Rows[RowIndex].Cells[1].Value = item.Dev_Name;
+                        gridData.Rows[RowIndex].Cells[2].Value = item.Dev_SN;
+                        gridData.Rows[RowIndex].Cells[3].Value = Convert.ToDecimal(item.Dev_Price).ToString("#,##0.##");
+                        gridData.Rows[RowIndex].Cells[4].Value = CU.GET_StatusName(Convert.ToInt32(item.Dev_S_ID));
+                        gridData.Rows[RowIndex].Cells[5].Value = CU.GET_DepartName(item.Dep_id);
+                        var data = CU.GET_BranchData(Convert.ToInt32(item.branch_id));
+                        gridData.Rows[RowIndex].Cells[6].Value = data[0];
+                        RowIndex += 1;
+                        TotalVal = TotalVal + Convert.ToDecimal(item.Dev_Price);
+                    }
+                    RowIndex = 0;
+                    label1.Text = "จำนวนทั้งหมด : " + (gridData.Rows.Count - 1).ToString() + " รายการ";
+                    label2.Text = "มูลค่ารวม : " + TotalVal.ToString("#,##0.##") + " บาท";
+                    TotalVal = 0;
+                }
             }
         }
     }
